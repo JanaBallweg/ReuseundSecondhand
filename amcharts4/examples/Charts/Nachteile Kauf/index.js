@@ -7,28 +7,40 @@ chart.colors.saturation = 0.4;
 
 chart.data = [{ 
 	"reason": "weiß nicht/keine Angabe",
-	"percent": 1
-}, {
+	"percent": 6
+}, { 
 	"reason": "Sonstiges",
-	"percent": 3
+	"percent": 2
+},	{
+	"reason": "Gebraucht-Kauf nur für Leute, die sich etwas Neues nicht leisten können",
+	"percent": 4
 }, {
-	"reason": "Einzigartigkeit der Produkte",
-	"percent": 19
+	"reason": "Die Kommunikation mit dem Verkäufer ist anstrengend",
+	"percent": 8
 }, {
-	"reason": "Lieber gebrauchte produkte mit hoher Qualität",
-	"percent": 24
+	"reason": "Keine breite Auswahl",
+	"percent": 9
 }, {
-	"reason": "Kauf nicht mehr verfügbaren Produkte",
+	"reason": "Suche ist aufwendig",
+	"percent": 14
+}, {
+	"reason": "Ich fühle mich wohler mit neuen Produkten",
+	"percent": 17
+},{
+	"reason": "Bedenken über Hygiene",
+	"percent": 21
+},{
+	"reason": "Keine Angaben über vorherige Nutzung",
+	"percent": 33
+}, {
+	"reason": "Bedenken, ob Produkte sind wie beschrieben siend",
 	"percent": 34
 }, {
-	"reason": "Produkte, die man sich neu nie leisten kann",
-	"percent": 36
+	"reason": "Bedenken bei der Vertrauenswürdigkeit des Verkäufers",
+	"percent": 46
 }, {
-	"reason": "Vermeidung unnötiger Resourcen",
-	"perzent": 42
-}, {
-	"reason": "Sparen beim Kauf",
-	"percent": 56
+	"reason": "Ungewissheit über die FUnktionalität der Produkte",
+	"percent": 52
 }];
 
 
