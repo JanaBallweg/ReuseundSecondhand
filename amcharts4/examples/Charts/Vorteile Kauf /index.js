@@ -25,7 +25,7 @@ chart.data = [{
 	"percent": 36
 }, {
 	"reason": "Vermeidung unnötiger Resourcen",
-	"perzent": 42
+	"percent": 42
 }, {
 	"reason": "Sparen beim Kauf",
 	"percent": 56
