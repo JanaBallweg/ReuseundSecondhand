@@ -7,55 +7,28 @@ chart.colors.saturation = 0.4;
 
 chart.data = [{ 
 	"reason": "Sonstiges",
-	"percent": 9
+	"percent": 4
 }, { 
-	"reason": "Elektronische Großgeräte (z.B. Kühlschränke)",
-	"percent": 6
+	"reason": "Produkt war ein Geschenk",
+	"percent": 5
 },	{
-	"reason": "Fahrzeuge",
-	"percent": 6
+	"reason": "Wusste nich wo",
+	"percent": 12
 }, {
-	"reason": "Fahrzeugteile & Zubehör",
-	"percent": 8
+	"reason": "Hatte es vergessen und wollte es erstmal behalte",
+	"percent": 15
 }, {
-	"reason": "Baby-/Kinderausstattung und -kleidung",
-	"percent": 14
+	"reason": "Weiß nicht/keine Angabe",
+	"percent": 16
 }, {
-	"reason": "Musikinstrumente",
-	"percent": 19
+	"reason": "Der Aufwand der Entsorgung war zu gro",
+	"percent": 24
 }, {
-	"reason": "Dekoration, Möbel",
-	"percent": 20
-},{
-	"reason": "Sammlerstücke, Antiquitäten",
-	"percent": 20
-},{
-	"reason": "Werkzeuge, Gartengeräte, DIY-Zubehör",
-	"percent": 23
-}, {
-	"reason": "Smartphones, Tablets",
+	"reason": "Produkt hat noch einen (emotionalen) Wert",
 	"percent": 25
-}, {
-	"reason": "Sportequipment",
-	"percent": 26
-}, {
-	"reason": "Elektrogeräte (ink. PCs, Radios)",
-    "percent": 27
-}, {
-	"reason": "Videospiele, Spielzeuge",
-    "percent": 31
-}, {
-	"reason": "Fotoapparate & Zubehör",
-    "percent": 34
-}, {
-	"reason": "Kleider, Schuhe, Accessoires",
-    "percent": 57
-}, {
-	"reason": "Bücher",
-    "percent": 58
-}, {
-	"reason": "CDs, DVDs, BlueRays",
-    "percent": 62
+},{
+	"reason": "Endgültige Trennung war zu schwer",
+	"percent": 31
 }];
 
 

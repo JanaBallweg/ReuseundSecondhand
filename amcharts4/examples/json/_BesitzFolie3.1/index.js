@@ -6,56 +6,17 @@ var chart = am4core.create("chartdiv", am4charts.XYChart);
 chart.colors.saturation = 0.4;
 
 chart.data = [{ 
-	"reason": "Sonstiges",
-	"percent": 9
+	"reason": "Straße",
+	"percent": 15
 }, { 
-	"reason": "Elektronische Großgeräte (z.B. Kühlschränke)",
-	"percent": 6
+	"reason": "Wohltätige Einrichtung",
+	"percent": 21
 },	{
-	"reason": "Fahrzeuge",
-	"percent": 6
+	"reason": "Online-Kleinanzeigen",
+	"percent": 34
 }, {
-	"reason": "Fahrzeugteile & Zubehör",
-	"percent": 8
-}, {
-	"reason": "Baby-/Kinderausstattung und -kleidung",
-	"percent": 14
-}, {
-	"reason": "Musikinstrumente",
-	"percent": 19
-}, {
-	"reason": "Dekoration, Möbel",
-	"percent": 20
-},{
-	"reason": "Sammlerstücke, Antiquitäten",
-	"percent": 20
-},{
-	"reason": "Werkzeuge, Gartengeräte, DIY-Zubehör",
-	"percent": 23
-}, {
-	"reason": "Smartphones, Tablets",
-	"percent": 25
-}, {
-	"reason": "Sportequipment",
-	"percent": 26
-}, {
-	"reason": "Elektrogeräte (ink. PCs, Radios)",
-    "percent": 27
-}, {
-	"reason": "Videospiele, Spielzeuge",
-    "percent": 31
-}, {
-	"reason": "Fotoapparate & Zubehör",
-    "percent": 34
-}, {
-	"reason": "Kleider, Schuhe, Accessoires",
-    "percent": 57
-}, {
-	"reason": "Bücher",
-    "percent": 58
-}, {
-	"reason": "CDs, DVDs, BlueRays",
-    "percent": 62
+	"reason": "Freunde oder Familie",
+	"percent": 37
 }];
 
 
@@ -77,7 +38,7 @@ series.sequencedInterpolation = true;
 series.defaultState.transitionDuration = 1000;
 series.sequencedInterpolationDelay = 100;
 series.columns.template.strokeOpacity = 0;
-series.fill = am4core.color("#838097");
+series.fill = am4core.color("#9DC4E6");
 
 
 series.tooltipText = "{valueX}";
