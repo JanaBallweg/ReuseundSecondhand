@@ -86,25 +86,168 @@
     <!--Besitz-->
 	<div class="section" id="section2">
     <h2>Besitz gebrauchter Produkte</h2>
-        <div class="slide" ><h4>Produktkategorien , die die Befragten seit mind. 12 Monaten nicht mehr genutzt haben</h4> </div>
+        <div class="slide"> <h4>Produktkategorien, die die Befragten seit mind. 12 Monaten nicht mehr genutzt haben</h4>
 
 
+          <div class="container-fluid position-relative">
+            <div class="row">
+                <div class="col-sm-7">
+                  <div  id="chartdiv1"></div>
+                </div>
+                <div class="col-sm-5" >
+                  <p id="chart1-p"> Mit 62 % sind <strong>CDs, DVDs </strong>und <strong>Bücher</strong> die häufigsten Produkte, die seit mindestens 12 Monaten nicht mehr benutzt wurden.
+                     Weitere 10 % gaben an keine Produkte nicht zu nutzen. </p> 
+                </div>
+                
+            </div>
+        </div>
+        
+         
+
+          
+          <script>
 
 
+            //am4core.useTheme(am4themes_animated);
+    
+            var chart = am4core.create("chartdiv1", am4charts.XYChart);
+    
+            contentHeight = 
+            chart.colors.saturation = 0.4;
+    
+            chart.data = [{ 
+              "reason": "Sonstiges",
+              "percent": 9
+            }, { 
+              "reason": "Elektronische Großgeräte (z.B. Kühlschränke)",
+              "percent": 6
+            },	{
+              "reason": "Fahrzeuge",
+              "percent": 6
+            }, {
+              "reason": "Fahrzeugteile & Zubehör",
+              "percent": 8
+            }, {
+              "reason": "Baby-/Kinderausstattung und -kleidung",
+              "percent": 14
+            }, {
+              "reason": "Musikinstrumente",
+              "percent": 19
+            }, {
+              "reason": "Dekoration, Möbel",
+              "percent": 20
+            },{
+              "reason": "Sammlerstücke, Antiquitäten",
+              "percent": 20
+            },{
+              "reason": "Werkzeuge, Gartengeräte, DIY-Zubehör",
+              "percent": 23
+            }, {
+              "reason": "Smartphones, Tablets",
+              "percent": 25
+            }, {
+              "reason": "Sportequipment",
+              "percent": 26
+            }, {
+              "reason": "Elektrogeräte (ink. PCs, Radios)",
+                "percent": 27
+            }, {
+              "reason": "Videospiele, Spielzeuge",
+                "percent": 31
+            }, {
+              "reason": "Fotoapparate & Zubehör",
+                "percent": 34
+            }, {
+              "reason": "Kleider, Schuhe, Accessoires",
+                "percent": 57
+            }, {
+              "reason": "Bücher",
+                "percent": 58
+            }, {
+              "reason": "CDs, DVDs, BlueRays",
+                "percent": 62
+            }];
+    
+    
+            var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+            categoryAxis.renderer.grid.template.location = 0;
+            categoryAxis.dataFields.category = "reason";
+            categoryAxis.renderer.grid.template.disabled = true;
+           
+            var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
+            valueAxis.renderer.maxLabelPosition = 0.98;
+              valueAxis.tooltip.disabled = true;
+            valueAxis.renderer.grid.template.disabled = true;
+    
+            var series = chart.series.push(new am4charts.ColumnSeries());
+            series.dataFields.categoryY = "reason";
+            series.dataFields.valueX = "percent";
+            series.tooltipText = "{valueX}";
+            series.sequencedInterpolation = true;
+            series.defaultState.transitionDuration = 1000;
+            series.sequencedInterpolationDelay = 100;
+            series.columns.template.strokeOpacity = 0;
+            series.fill = am4core.color("#838097");
+          
+    
+            series.tooltipText = "{valueX}";
+    
+            chart.cursor = new am4charts.XYCursor();
+            chart.cursor.lineY.disabled = true;
+            chart.cursor.lineX.disabled = true;
+          </script>
 
-
-
+  
+ </div>
+    
         <div class="slide">Slide 2 </div>
         <div class="slide">Slide 3 </div>
         <div class="slide">Slide 4 </div>
         
 	</div>
  <!--KAufVerkauf-->
-<div class="section"><h2>Kauf und Verkauf gebrauchter Produkte</h2></div>
+<div class="section" id="section3"><h2>Kauf und Verkauf gebrauchter Produkte</h2></div>
 
 
  <!--Impressum-->
-<div class="section"><h2>Impressum</h2></div>
+<div class="section" id="section4"><h2>Impressum</h2>
+
+  <div class="studie">
+    <!--bootstrap zweispaltig-->
+    <div class="row">
+     <div class="col-5">
+
+      Diese Webseite ist eine Semesterarbeit von:
+       Jana Ballweg, Lea Melina Deppisch, Jana Halter, Shirin Ham<br/>
+      Datum der Abgabe: 29.01.2021 <br/>
+                                          
+      Semesterarbeit im Kurs WebDesign 3 - Interaktives Informationsdesign</br>
+      Dozent: Dipl.-Des. Lothar B. Blum</br>
+      DHBW Mosbach, Fachbereich Onlinemedien</br>
+     </br>
+     </br>
+     
+      <h5>Quelle</h5></br>
+      <strong>ReUse und Secondhand</strong><br/>
+                <a href="https://wupperinst.org/fa/redaktion/downloads/projects/ReUse-Secondhand-Studie.pdf">Wilts, Henning und Fecke, Marina: ReUse und Secondhand in Deutschland </a>
+                (Hrsg.: Wuppertal Institut für Klima, Umwelt, Energie gGmbH) erschienen: Wuppertal, September 2020
+     </div>
+
+    
+     <div class="col-1">                         
+     </div>
+
+     <div class="col-5">
+     
+     </div> 
+    </div>  
+   </div>
+ </div>
+
+
+
+
+</div>
 </div>
 
 

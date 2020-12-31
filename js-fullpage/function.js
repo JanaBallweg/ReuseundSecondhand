@@ -10,7 +10,7 @@ $('#fullpage').fullpage({
 
 
     navigation:false,
-    navigationTooltips:['Home', 'Die Studie', 'Besitz', 'Kauf & Verkauf'],
+    navigationTooltips:['Home', 'Die Studie', 'Besitz', 'Kauf & Verkauf','Impressum'],
     navigation:'left',
 
 
