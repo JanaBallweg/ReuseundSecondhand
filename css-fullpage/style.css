@@ -115,9 +115,7 @@ position:relative;
     top:20%;
     left:5%;
     font-family: 'Open Sans';font: weight 400;
-    font-size:1.1em;
-    color: red;
-    
+    font-size:1.1em;   
     }
 
 .studie-img{
@@ -413,4 +411,8 @@ position:relative;
         border-color:#DB7261;
         font-family: 'Source Sans', weight="600"; 
         
+    }
+ 
+    #text2 {
+      display: none;
     }

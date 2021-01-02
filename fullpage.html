@@ -216,9 +216,11 @@ chart.responsive.enabled = true;
             </div>
             
             <div class="col-sm-5" >
-              <p id="chart1-p"> Mit 62 % sind <strong>CDs, DVDs </strong>und <strong>Bücher</strong> die häufigsten Produkte, die seit mindestens 12 Monaten nicht mehr benutzt wurden.
-                     Weitere 10 % gaben an keine Produkte nicht zu nutzen. </p> 
-              </div>
+              <p id="chart1-p"> Knapp  <strong>die Hälfte der Befragten (47%) </strong>gibt an, ungenutzte Produkte mit einem Wert von <strong> unter 500 € </strong>zu besitzen. Darüber hinaus liegt bei <strong>einem Drittel</strong> der Wert ungenutzter Produkte bei <strong>über 500 €</strong>.
+                <strong> Im Westen </strong> haben die ungenutzten Produkte vermehrt einen Wert von <strong>250-499 €</strong>. <strong>Im Osten </strong> hingegen liegt der Wert bei <strong>100-259 €</strong>.
+                <strong>Der Deutsche </strong>besitzt im <strong>Durchschnitt </strong>ungenutzte Produkte im Wert von <strong>1.289 €</strong>.
+              </p>
+            </div>
                 
       </div>
      </div>
@@ -433,11 +435,13 @@ chart.responsive.enabled = true;
           <div class="col-sm-5">
             <h5>Vorteile Gebraucht-Kauf</h5>
             <div  id="chartdiv4"></div>
-           
+            <p>Der wichtigste Vorteil liegt beim Sparpotenzial. Dadurch können gebrauchte Produkte gekauft werden, die sich viele Leute neu nicht leisten können.
+            </p>
           </div>
           <div class="col-sm-7" >
             <h5>Nachteile Gebraucht-Kauf</h5>
             <div  id="chartdiv3"></div> 
+            <p>Spontan sind die größten Bedenken beim Gebraucht-Kauf: Zustand/Funktionalität/Beschädigung und Hygiene/Sauberkeit.</p>
           </div>
          
     </div>
@@ -623,14 +627,27 @@ series.fill = am4color.color("#AFC5C7");
          
         </div>
         <div class="col-sm-3" >
-          <button type="button" class="btn btn-lg" id="Kauf">Gebraucht-Kauf</button>
-          <button type="button" class="btn btn-lg" id="Verkauf">Gebraucht-VerKauf</button>
-          
+          <button type="button" class="btn btn-lg" id="Kauf" onclick="toggleParagraph(1, 2);">Altersklasse</button>
+          <button type="button" class="btn btn-lg" id="Verkauf" onclick="toggleParagraph(2, 1);">Geschlecht</button>
+          <p id="text1">
+            Die jüngere Generation, die <strong>16-29-Jährigen</strong>, kaufen häufiger gebrauchte<strong> Kleidung</strong> (31% vs. 32%) und gebrauchte <strong>Videospiele/Spielzeug </strong> (28% vs. 18%)als <strong>über 30-Jährige.</strong> Diese kaufen dagegen häufiger <strong> CDs/DVDs </strong> (31% vs. 25%)und <strong>Fahrzeuge </strong> (27% vs. 19%) gebraucht.
+        </p>
+        <p id="text2">
+          <strong>Frauen</strong> kaufen häufiger gebrauchte <strong>Kleidung</strong> (38% w vs. 19% m), <strong>Baby-/Kinderausstattung</strong> (21% w vs. 13% m) sowie <strong>Möbel & Dekoration </strong> (42% w vs. 31% m). 
+          <strong>Männer </strong>hingegen kaufen häufiger <strong> Smartphones & Tablets </strong> (23% vs. 18%), <strong>Elektrogeräte</strong> (24% vs. 17%), <strong>/Spielzeuge</strong> (37% vs. 29%) sowie <strong>Fahrzeuge</strong> (50% vs. 41%).
+        </p>
          
         </div>
        
   </div> 
 </div>
+<script>
+function toggleParagraph(nbrShow, nbrHide) {
+	document.getElementById("text" + nbrHide).style.display = "none";
+  document.getElementById("text" + nbrShow).style.display = "block";
+}
+
+</script>
 
 <script>
 
@@ -884,6 +901,10 @@ series.fill = am4color.color("#F8A091");
         <div class="col-sm-6" >
           <img src="Images/chart9.PNG" width="400" height="auto" margin-top=200px>
         </div>
+
+        <p>Weniger als <strong>die Hälfte der Befragten (47%)</strong>  hat in den letzten 12 Monaten Gebraucht-Käufe vorgenommen, unter den <strong>19- bis 29-Jährigen </strong> waren es sogar <strong>59 %.</strong> 
+          In der Altersklasse der über <strong>30-Jährigen</strong> geben <strong>49 %</strong> an, in den letzten 12 Monaten gebrauchte Waren gekauft zu haben, bei den <strong>Jüngeren</strong> waren es dagegen lediglich <strong>36 %.</strong> 
+           Darüber hinaus geben <strong> 22 % </strong>der 1.023 Teilnehmenden an <strong>mindestens einmal </strong> etwas Gebrauchtes gekauft zu haben und <strong>29 % </strong>kauften in den letzten 12 Monaten wiederholt Produkte, welche nicht mehr neuwertig waren.</p>
 
 
       <script>
@@ -1151,7 +1172,7 @@ series.fill = am4color.color("#F8A091");
     <div class="row">
        <div class="col-sm-6">          
             <p class="zweispaltig_text">Verkauft wurden ungenutzte Produkte von 46 % der Personen über eine Online-Kleinanzeigenseite (30 %), 
-              über einen On-line-Marktplatz (21 %), über einen Ankaufsdienst (8 %), auf einem Flohmarkt (3 %) oder über eine Zeitungsannonce (1 %)</p>
+              über einen Online-Marktplatz (21 %), über einen Ankaufsdienst (8 %), auf einem Flohmarkt (3 %) oder über eine Zeitungsannonce (1 %)</p>
        </div>
 
           
