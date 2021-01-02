@@ -79,9 +79,10 @@ series.sequencedInterpolationDelay = 100;
 series.columns.template.strokeOpacity = 0;
 series.fill = am4core.color("#838097");
 
-
 series.tooltipText = "{valueX}";
 
 chart.cursor = new am4charts.XYCursor();
 chart.cursor.lineY.disabled = true;
 chart.cursor.lineX.disabled = true;
+
+chart.responsive.enabled = true;
