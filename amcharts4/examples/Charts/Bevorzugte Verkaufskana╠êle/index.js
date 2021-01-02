@@ -1,52 +1,79 @@
 am4core.useTheme(am4themes_animated);
 
-var chart = am4core.create("chartdiv", am4charts.PieChart);
+var chart = am4core.create("chartdiv", am4charts.XYChart);
 
+chart.width = 500;
 
 chart.data = [{
-    "country": "Verkaufe auf Online-Kanäle",
-    "value": 797.94
-}, {
-    "country": "Verkaufe offline",
-    "value": 61.38
-}, {
-    "country": "Ich nutze beides",
-    "value": 153.45
-}, {
-    "country": "Weiß nicht / keine Angabe",
-    "value": 20.46
-}];
+	"category": "",
+	"Weiß nicht / keine Angabe": 2,
+	"Verkauf online und offline": 15,
+	"Verkauf offline": 5,
+	"Verkauf online": 78
+}]
 
-chart.innerRadius = am4core.percent(50);
-
-var series = chart.series.push(new am4charts.PieSeries());
-series.dataFields.value = "value";
-series.dataFields.category = "country";
-
-series.slices.template.cornerRadius = 10;
-series.slices.template.innerCornerRadius = 7;
-series.alignLabels = false;
-series.labels.template.padding(0,0,0,0);
-
-series.labels.template.bent = true;
-series.labels.template.radius = 4;
-
-series.slices.template.states.getKey("hover").properties.scale = 1.1;
-series.labels.template.states.create("hover").properties.fill = am4core.color("#fff");
-
-series.slices.template.events.on("over", function (event) {
-    event.target.dataItem.label.isHover = true;
-})
-
-series.slices.template.events.on("out", function (event) {
-    event.target.dataItem.label.isHover = false;
-})
-
-series.ticks.template.disabled = true;
-
-// this creates initial animation
-series.hiddenState.properties.opacity = 1;
-series.hiddenState.properties.endAngle = -90;
-series.hiddenState.properties.startAngle = -90;
-
+chart.padding(30, 30, 10, 30);
 chart.legend = new am4charts.Legend();
+chart.legend.position = "bottom";
+chart.legend.contentAlign = "left";
+
+// Modify chart's colors
+chart.colors.list = [
+	am4core.color("#7F7F7F"),
+	am4core.color("#C9C9C9"),
+	am4core.color("#689195"),
+	am4core.color("#9DC3E7"),
+  ];
+
+var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+categoryAxis.dataFields.category = "category";
+categoryAxis.renderer.cellStartLocation = -0.5;
+categoryAxis.renderer.minGridDistance = 60;
+categoryAxis.renderer.grid.template.location = 0;
+categoryAxis.interactionsEnabled = false;
+categoryAxis.renderer.grid.template.disabled = true;
+
+var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+valueAxis.tooltip.disabled = true;
+valueAxis.renderer.grid.template.strokeOpacity = 0.05;
+valueAxis.renderer.minGridDistance = 20;
+valueAxis.interactionsEnabled = false;
+valueAxis.min = 0;
+valueAxis.renderer.minWidth = 35;
+valueAxis.renderer.grid.template.disabled = true;
+
+var series1 = chart.series.push(new am4charts.ColumnSeries());
+series1.columns.template.width = am4core.percent(50);
+series1.columns.template.tooltipText = "{name}: {valueY.value}";
+series1.name = "Weiß nicht / keine Angabe";
+series1.dataFields.categoryX = "category";
+series1.dataFields.valueY = "Weiß nicht / keine Angabe";
+series1.stacked = true;
+
+var series2 = chart.series.push(new am4charts.ColumnSeries());
+series2.columns.template.width = am4core.percent(50);
+series2.columns.template.tooltipText = "{name}: {valueY.value}";
+series2.name = "Verkauf online und offline";
+series2.dataFields.categoryX = "category";
+series2.dataFields.valueY = "Verkauf online und offline";
+series2.stacked = true;
+
+var series3 = chart.series.push(new am4charts.ColumnSeries());
+series3.columns.template.width = am4core.percent(50);
+series3.columns.template.tooltipText = "{name}: {valueY.value}";
+series3.name = "Verkauf offline";
+series3.dataFields.categoryX = "category";
+series3.dataFields.valueY = "Verkauf offline";
+series3.stacked = true;
+
+var series4 = chart.series.push(new am4charts.ColumnSeries());
+series4.columns.template.width = am4core.percent(50);
+series4.columns.template.tooltipText = "{name}: {valueY.value}";
+series4.name = "Verkauf online";
+series4.dataFields.categoryX = "category";
+series4.dataFields.valueY = "Verkauf onlines";
+series4.stacked = true;
+
+chart.responsive.enabled = true;
+
+

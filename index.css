@@ -5,6 +5,7 @@ h1 {font-family: 'Roboto', bold; position:absolute; top:50px; left:230px; font-s
 h2 {text-decoration: blink;font-family: 'Roboto', bold; position:absolute; top:50px; left:300px; font-size:45px; color:#689195;}
 h3 {text-decoration: blink;font-family: 'Roboto', bold; position:absolute; top:300px; left:300px; font-size:45px; color:#689195;}
 h4 {text-decoration: blink;font-family: 'Roboto', bold; position:absolute; top:120px; left:300px; font-size:15px; color:#3d3d3d;}
+h5 {text-decoration: blink;font-family: 'Source Sans', bold; position:absolute; top:200px; left:15px; font-size:15px; color:#3d3d3d;}
 .studie {font-family: 'Source Sans Pro'; font: weight 300;margin-top:130px; font-size:15px;}
 
 
@@ -87,7 +88,7 @@ nav ul li:hover {opacity:1; color:#F8A091; font-weight: bold; text-decoration: n
   font-family: -apple-system, BlinkMacSystemFont, "Source Sans Pro", weight 300;
   overflow: hidden;
   margin-top:150px;
-  margin-left:200px;
+  margin-left:500px;
 }
   
 .zweispaltig{

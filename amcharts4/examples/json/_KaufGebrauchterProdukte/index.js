@@ -74,11 +74,12 @@ chart.data = [{
 
 // Create axes
 var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
-categoryAxis.dataFields.category = "Kategorie";
-categoryAxis.numberFormatter.numberFormat = "#";
 categoryAxis.renderer.grid.template.location = 0;
+categoryAxis.dataFields.category = "Kategorie";
+
+
 categoryAxis.renderer.cellStartLocation = 0.1;
-categoryAxis.renderer.cellEndLocation = 0.9;
+categoryAxis.renderer.cellEndLocation = 0.5;
 categoryAxis.renderer.grid.template.disabled = true;
 
 var  valueAxis = chart.xAxes.push(new am4charts.ValueAxis()); 
