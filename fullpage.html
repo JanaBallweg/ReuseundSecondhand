@@ -430,6 +430,7 @@ chart.responsive.enabled = true;
  
   <div class="slide"> <h4>Die wichtigsten Vor-und Nachteile eines Gebraucht-Kaufs und -Verkaufs</h4>
 
+    <div id="text1">
     <div class="container-fluid position-relative">
       <div class="row">
           <div class="col-sm-5">
@@ -445,13 +446,39 @@ chart.responsive.enabled = true;
           </div>
          
     </div>
-
-   
-   
   </div>
-  <button type="button" class="btn btn-lg" id="Kauf">Gebraucht-Kauf</button>
-  <button type="button" class="btn btn-lg" id="Verkauf">Gebraucht-VerKauf</button>
+</div>
 
+<div id="text2">
+  <div class="container-fluid position-relative">
+    <div class="row">
+        <div class="col-sm-5">
+          <h5>Vorteile Gebraucht-Kauf</h5>
+          <div  id="chartdiv3"></div>
+          <p>Der wichtigste Vorteil liegt beim Sparpotenzial. Dadurch können gebrauchte Produkte gekauft werden, die sich viele Leute neu nicht leisten können.
+          </p>
+        </div>
+        <div class="col-sm-7" >
+          <h5>Nachteile Gebraucht-Kauf</h5>
+          <div  id="chartdiv4"></div> 
+          <p>Spontan sind die größten Bedenken beim Gebraucht-Kauf: Zustand/Funktionalität/Beschädigung und Hygiene/Sauberkeit.</p>
+        </div>
+       
+  </div>
+</div>
+</div>
+
+  <button type="button" class="btn btn-lg" id="Kauf" onclick="toggleParagraph(1, 2)">Gebraucht-Kauf</button>
+  <button type="button" class="btn btn-lg" id="Verkauf" onclick="toggleParagraph(2, 1)">Gebraucht-VerKauf</button>
+
+
+ <!--Javaskriptbuttons-->
+<script>
+function toggleParagraph(nbrShow, nbrHide) {
+	document.getElementById("text" + nbrHide).style.display = "none";
+  document.getElementById("text" + nbrShow).style.display = "block";
+}
+</script>
 
   <!--Nachteile Gebrauchtkauf-->
   <script>
@@ -612,6 +639,17 @@ series.fill = am4color.color("#AFC5C7");
 
 
  </script>
+
+ <!--Nachteile Gebrauchtverkauf-->
+
+ 
+ <!--Vorteile Gebrauchtverkauf-->
+
+ 
+
+
+
+
 
 </div>
 
