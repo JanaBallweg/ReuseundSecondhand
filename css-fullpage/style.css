@@ -6,6 +6,13 @@ margin-left:100px;
 font-size:10px;
 }
 
+p {
+
+    font-family: 'Open Sans';
+    font-size:15px;
+
+
+}
 h1 {font-family: 'Roboto', bold; position:absolute; top:50px; left:230px; font-size:65px; color:#689195;}
 
 .section h1{
@@ -47,7 +54,7 @@ h1 {font-family: 'Roboto', bold; position:absolute; top:50px; left:230px; font-s
         top:25%;
         font-size:20px;
         color:#000000;
-        font-family: "Source Sans", bold;
+        font-family: "Open Sans", bold;
         left:28%;}
 
 .h7 {
@@ -91,7 +98,7 @@ position:relative;
     left:5%;
     bottom:10%;
     color:rgb(4, 98, 92);
-    font-family: 'Source Sans Pro', sans-serif; font: weight 300; font-size:15px;
+    font-family: 'Open Sans'; font: weight 300; font-size:15px;
  }  
 
  .logo-img{
@@ -128,13 +135,13 @@ position:relative;
 
 
 #fp-nav ul li .fp-tooltip{
-    color:coral;
+    color:#DB7261;
 }
 
 
 #fp-nav ul li a span,.fp-slidesNav ul li a span:hover{
 
-    background:coral;
+    background:#DB7261;
 }
 
 
@@ -161,8 +168,6 @@ position:relative;
         max-width:800px;
       max-height: 800px;
       height: 70vh;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-family: -apple-system, BlinkMacSystemFont, "Source Sans Pro";
         font-size: 15px;
         background-color: #ffffff;
         overflow: hidden;
@@ -174,7 +179,7 @@ position:relative;
         margin-top:150px;
         margin-right:200px;
         top: 30%;
-        font-family: 'Source Sans Pro', sans-serif; font: weight 300; font-size:15px;
+        font-family: 'Open Sans'; font-size:15px;
 
 
     }
@@ -186,8 +191,6 @@ position:relative;
         max-width:800px;
       max-height: 400px;
       height: 70vh;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-family: -apple-system, BlinkMacSystemFont, "Source Sans Pro";
         font-size: 15px;
         background-color: #ffffff;
         overflow: hidden;
@@ -201,8 +204,6 @@ position:relative;
         max-width:800px;
       max-height: 400px;
       height: 70vh;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-family: -apple-system, BlinkMacSystemFont, "Source Sans Pro";
         font-size: 15px;
         background-color: #ffffff;
         overflow: hidden;
@@ -216,8 +217,6 @@ position:relative;
         max-width:800px;
       max-height: 400px;
       height: 70vh;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-family: -apple-system, BlinkMacSystemFont, "Source Sans Pro";
         font-size: 15px;
         background-color: #ffffff;
         overflow: hidden;
@@ -231,8 +230,6 @@ position:relative;
         max-width:800px;
       max-height: 400px;
       height: 70vh;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-family: -apple-system, BlinkMacSystemFont, "Source Sans Pro";
         font-size: 15px;
         background-color: #ffffff;
         overflow: hidden;
@@ -248,8 +245,6 @@ position:relative;
         max-width:800px;
       max-height: 800px;
       height: 80vh;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-family: -apple-system, BlinkMacSystemFont, "Source Sans Pro";
         font-size: 15px;
         background-color: #ffffff;
         overflow: hidden;
@@ -263,8 +258,6 @@ position:relative;
         max-width:800px;
       max-height: 800px;
       height: 80vh;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-family: -apple-system, BlinkMacSystemFont, "Source Sans Pro";
         font-size: 15px;
         background-color: #ffffff;
         overflow: hidden;
@@ -278,8 +271,6 @@ position:relative;
         max-width:800px;
       max-height: 600px;
       height: 60vh;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-family: -apple-system, BlinkMacSystemFont, "Source Sans Pro";
         font-size: 15px;
         background-color: #ffffff;
         overflow: hidden;
@@ -293,8 +284,6 @@ position:relative;
         max-width:800px;
       max-height: 600px;
       height: 100vh;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-family: -apple-system, BlinkMacSystemFont, "Source Sans Pro";
         font-size: 15px;
         background-color: #ffffff;
         overflow: hidden;
@@ -308,8 +297,6 @@ position:relative;
         max-width:600px;
       max-height: 300px;
       height: 80vh;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-family: -apple-system, BlinkMacSystemFont, "Source Sans Pro";
         font-size: 15px;
         background-color: #ffffff;
         overflow: hidden;
@@ -324,7 +311,7 @@ position:relative;
         position:absolute;
         margin-bottom:50px;
         left:5%;
-        font-family: 'Source Sans Pro'; font: weight 300; font-size:15px;
+        font-family: 'Open Sans'; font: weight 300; font-size:15px;
         }
 
 
@@ -334,7 +321,6 @@ position:relative;
           max-height: 450px;
           height: 80vh;
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            font-family: -apple-system, BlinkMacSystemFont, "Source Sans Pro";
             font-size: 15px;
             background-color: #ffffff;
             overflow: hidden;
@@ -350,7 +336,6 @@ position:relative;
           max-height: 700px;
           height: 80vh;
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            font-family: -apple-system, BlinkMacSystemFont, "Source Sans Pro";
             font-size: 15px;
             background-color: #ffffff;
             overflow: hidden;
@@ -366,7 +351,6 @@ position:relative;
           max-height: 600px;
           height: 60vh;
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            font-family: -apple-system, BlinkMacSystemFont, "Source Sans Pro";
             font-size: 15px;
             background-color: #ffffff;
             overflow: hidden;
@@ -382,7 +366,6 @@ position:relative;
           max-height: 600px;
           height: 60vh;
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            font-family: -apple-system, BlinkMacSystemFont, "Source Sans Pro";
             font-size: 15px;
             background-color: #ffffff;
             overflow: hidden;
@@ -393,7 +376,7 @@ position:relative;
         }
     
         #chartdiv1, #chartdiv2, #chartdiv3, #chartdiv4, #chartdiv5,
-         #chartdiv6, #chartdiv7, #chartdiv8, #chartdiv9, #chartdiv10, #chartdiv11, #chartdiv12, #chartdiv13, #chartdiv14, #chartdiv15, #chartdiv16{
+         #chartdiv6, #chartdiv7, #chartdiv8, #chartdiv9, #chartdiv10, #chartdiv11, #chartdiv12, #chartdiv13, #chartdiv14, #chartdiv15, #chartdiv16, #chartdiv17{
 
             font-family: 'Open Sans';
             
@@ -406,26 +389,16 @@ position:relative;
 
       /*Buttons Vor-und Nachteile*/
 
-      .btn.btn-lg{
-        background-color:#ffffff;
-        border-color:#DB7261;
-        font-family: 'Source Sans', weight="600"; 
-        margin-bottom:50px;
-        
-      }
-
-
-      #Kauf{
+          #Kauf{
         
     margin-left:500px;}
 
 
-
-
-      .btn.btn-lg:active{
+      
+      .btn.btn-lg:focus{
         background-color:#F8A091;
-        border-color:#DB7261;
-        font-family: 'Source Sans', weight="600"; 
+      
+        
 
 
       }
@@ -435,14 +408,14 @@ position:relative;
         background-color:#ffffff;
         border-color:#DB7261;
         font:#000000;
-        font-family: 'Source Sans', weight="600"; 
+        font-family: 'Open Sans'; 
 
            }
            
-    .btn.btn-lg:active{
+    .btn.btn-lg:hover{
          background-color:#F8A091;;
         border-color:#DB7261;
-        font-family: 'Source Sans', weight="600"; 
+        font-family: 'Open Sans'; 
         
     }
  
@@ -450,4 +423,10 @@ position:relative;
       display: none;
     }
 
-  
+    p {
+
+        font-family: 'Open Sans';
+        font-size:15px;
+    
+    
+    }
