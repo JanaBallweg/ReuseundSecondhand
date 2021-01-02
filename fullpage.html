@@ -17,6 +17,10 @@
  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet"> 
  <link rel="preconnect" href="https://fonts.gstatic.com">
  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet"> 
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet"> 
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@300;400;600;700&family=Redressed&display=swap" rel="stylesheet"> 
 
  <!--AMcharts-Bibliothek-->
  <script src="amcharts4/core.js"></script>
@@ -84,23 +88,25 @@
   </div>
 
     <!--Besitz-->
-	<div class="section" id="section2">
+  <div class="section" id="section2">
     <h2>Besitz gebrauchter Produkte</h2>
-        <div class="slide"> <h4>Produktkategorien, die die Befragten seit mind. 12 Monaten nicht mehr genutzt haben</h4>
 
 
-          <div class="container-fluid position-relative">
-            <div class="row">
-                <div class="col-sm-7">
-                  <div  id="chartdiv1"></div>
-                </div>
-                <div class="col-sm-5" >
-                  <p id="chart1-p"> Mit 62 % sind <strong>CDs, DVDs </strong>und <strong>Bücher</strong> die häufigsten Produkte, die seit mindestens 12 Monaten nicht mehr benutzt wurden.
-                     Weitere 10 % gaben an keine Produkte nicht zu nutzen. </p> 
-                </div>
-                
+    <!--Slide1-Besitz Produktkategorien , die die Befragten seit mind. 12 Monaten nicht mehr genutzt haben-->
+    <div class="slide"> <h4>Produktkategorien, die die Befragten seit mind. 12 Monaten nicht mehr genutzt haben</h4>
+      <div class="container-fluid position-relative">
+        <div class="row">
+          <div class="col-sm-7">
+            <div  id="chartdiv1"></div>
           </div>
+          
+          <div class="col-sm-5" >
+            <p id="chart1-p"> Mit 62 % sind <strong>CDs, DVDs </strong>und <strong>Bücher</strong> die häufigsten Produkte, die seit mindestens 12 Monaten nicht mehr benutzt wurden.
+                     Weitere 10 % gaben an keine Produkte nicht zu nutzen. </p> 
+          </div>
+                
         </div>
+      </div>
 
 <!--shirinsdiagramm 1-->
   <script>
@@ -196,18 +202,224 @@ chart.cursor.lineY.disabled = true;
 chart.cursor.lineX.disabled = true;
 
 chart.responsive.enabled = true;
-          </script>
+  </script>
 
-        </div>
+    </div>
+
+   <!--Slide2-Besitz-Wert der ungenutzten Produkte in Euro-->
     
-        <div class="slide">Slide 2 </div>
-        <div class="slide">Slide 3 </div>
-        <div class="slide">Slide 4 </div>
-        
-  </div>
+  <div class="slide">
+   <div class="container-fluid position-relative">
+      <div class="row">
+         <div class="col-sm-7">
+            <div  id="chartdiv14"></div>
+            </div>
+            
+            <div class="col-sm-5" >
+              <p id="chart1-p"> Mit 62 % sind <strong>CDs, DVDs </strong>und <strong>Bücher</strong> die häufigsten Produkte, die seit mindestens 12 Monaten nicht mehr benutzt wurden.
+                     Weitere 10 % gaben an keine Produkte nicht zu nutzen. </p> 
+              </div>
+                
+      </div>
+     </div>
+
+<!--shirinsdiagramm 2-->
+  <script>
+
+am4core.useTheme(am4themes_animated);
+
+var chart = am4core.create("chartdiv14", am4charts.PieChart);
+
+
+chart.data = [{
+    "country": "<100 €",
+    "value": 122.76
+}, {
+    "country": "100-249 €",
+    "value": 163.68
+}, {
+    "country": "250-499 €",
+    "value": 194.37
+}, {
+    "country": "500-999 €",
+    "value": 153.48
+},{
+        "country": "1.000-2.499 €",
+        "value": 123.99
+    }, {
+        "country": "2.500-4.999 €",
+        "value": 51.15
+    }, {
+        "country": "5.000 € oder mehr",
+        "value": 40.92
+    },{
+        "country": "Weiß nicht/keine Angabe",
+        "value": 163.68
+
+    }];
+
+chart.innerRadius = am4core.percent(50);
+
+var series = chart.series.push(new am4charts.PieSeries());
+series.dataFields.value = "value";
+series.dataFields.category = "country";
+
+
+series.alignLabels = false;
+series.labels.template.disabled = true;
+series.ticks.template.disabled = true;
+
+series.labels.template.bent = true;
+series.labels.template.radius = 4;
+
+series.slices.template.states.getKey("hover").properties.scale = 1.1;
+series.labels.template.states.create("hover").properties.fill = am4core.color("#fff");
+
+series.slices.template.events.on("over", function (event) {
+    event.target.dataItem.label.isHover = true;
+})
+
+series.slices.template.events.on("out", function (event) {
+    event.target.dataItem.label.isHover = false;
+})
+
+series.ticks.template.disabled = true;
+
+// this creates initial animation
+series.hiddenState.properties.opacity = 1;
+series.hiddenState.properties.endAngle = -90;
+series.hiddenState.properties.startAngle = -90;
+series.legendSettings.valueText = " ";
+
+series.colors.list = [
+    am4core.color("#5F5F5F"),
+    am4core.color("#A6A6A6"),
+    am4core.color("#99D5DB"),
+    am4core.color("#56787D"),
+    am4core.color("#2B3C3E"),
+    am4core.color("#62795E"),
+    am4core.color("#87A682"),
+    am4core.color("#9EC398"),
+  ];
+  
   
 
 
+chart.legend = new am4charts.Legend();
+chart.legend.legendSettings.valueText = false;
+chart.responsive.enabeled =true;
+
+          </script>
+
+   </div>
+
+       
+
+
+   <!--Slide3-Besitz-Entsorgung unbenutzter Produkte -->
+        <div class="slide">Entsorgung unbenutzer Produkte
+
+        <div class="container-fluid position-relative">
+          <div class="row">
+             <div class="col-sm-7">
+                <div  id="chartdiv15"></div>
+                </div>
+                
+                <div class="col-sm-5" >
+                  <p id="chart1-p"> Mit 62 % sind <strong>CDs, DVDs </strong>und <strong>Bücher</strong> die häufigsten Produkte, die seit mindestens 12 Monaten nicht mehr benutzt wurden.
+                         Weitere 10 % gaben an keine Produkte nicht zu nutzen. </p> 
+                  </div>
+                    
+          </div>
+         </div>
+    
+    <!--shirinsdiagramm 3-->
+      <script>
+    am4core.useTheme(am4themes_animated);
+
+var chart = am4core.create("chartdiv15", am4charts.XYChart);
+
+chart.width = 500;
+
+chart.data = [{
+	"category": "",
+	"Keine Entsorgung": 23,
+	"Hausmüll oder Wertstoffhof": 42,
+	"Verkauft": 46,
+	"Verschenkt": 48
+}]
+
+chart.padding(30, 30, 10, 30);
+chart.legend = new am4charts.Legend();
+chart.legend.position = "bottom";
+chart.legend.contentAlign = "left";
+
+// Modify chart's colors
+chart.colors.list = [
+	am4core.color("#7F7F7F"),
+	am4core.color("#C9C9C9"),
+	am4core.color("#689195"),
+	am4core.color("#9DC3E7"),
+  ];
+
+var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+categoryAxis.dataFields.category = "category";
+categoryAxis.renderer.cellStartLocation = -0.5;
+categoryAxis.renderer.minGridDistance = 60;
+categoryAxis.renderer.grid.template.location = 0;
+categoryAxis.interactionsEnabled = false;
+categoryAxis.renderer.grid.template.disabled = true;
+
+var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+valueAxis.tooltip.disabled = true;
+valueAxis.renderer.grid.template.strokeOpacity = 0.05;
+valueAxis.renderer.minGridDistance = 20;
+valueAxis.interactionsEnabled = false;
+valueAxis.min = 0;
+valueAxis.renderer.minWidth = 35;
+valueAxis.renderer.grid.template.disabled = true;
+
+var series1 = chart.series.push(new am4charts.ColumnSeries());
+series1.columns.template.width = am4core.percent(50);
+series1.columns.template.tooltipText = "{name}: {valueY.value}";
+series1.name = "Keine Entsorgung";
+series1.dataFields.categoryX = "category";
+series1.dataFields.valueY = "Keine Entsorgung";
+series1.stacked = true;
+
+var series2 = chart.series.push(new am4charts.ColumnSeries());
+series2.columns.template.width = am4core.percent(50);
+series2.columns.template.tooltipText = "{name}: {valueY.value}";
+series2.name = "Hausmüll oder Wertstoffhof";
+series2.dataFields.categoryX = "category";
+series2.dataFields.valueY = "Hausmüll oder Wertstoffhof";
+series2.stacked = true;
+
+var series3 = chart.series.push(new am4charts.ColumnSeries());
+series3.columns.template.width = am4core.percent(50);
+series3.columns.template.tooltipText = "{name}: {valueY.value}";
+series3.name = "Verkauft";
+series3.dataFields.categoryX = "category";
+series3.dataFields.valueY = "Verkauft";
+series3.stacked = true;
+
+var series4 = chart.series.push(new am4charts.ColumnSeries());
+series4.columns.template.width = am4core.percent(50);
+series4.columns.template.tooltipText = "{name}: {valueY.value}";
+series4.name = "Verschenkt";
+series4.dataFields.categoryX = "category";
+series4.dataFields.valueY = "Verschenkt";
+series4.stacked = true;
+
+chart.responsive.enabled = true;
+
+
+
+              </script>
+    
+       </div>
+      </div>
+        
 
  <!--KAufVerkauf-->
 <div class="section" id="section3"><h2>Kauf und Verkauf gebrauchter Produkte</h2>
@@ -422,7 +634,6 @@ series.fill = am4color.color("#AFC5C7");
 
 <script>
 
-  // Themes begin
 am4core.useTheme(am4themes_animated);
 // Themes end
 
@@ -501,13 +712,14 @@ var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
 categoryAxis.dataFields.category = "Kategorie";
 categoryAxis.numberFormatter.numberFormat = "#";
 categoryAxis.renderer.grid.template.location = 0;
+categoryAxis.renderer.minGridDistance = 20;
 categoryAxis.renderer.cellStartLocation = 0.1;
 categoryAxis.renderer.cellEndLocation = 0.9;
-categoryAxis.renderer.minGridDistance = 20;
 categoryAxis.renderer.grid.template.disabled = true;
 
 var  valueAxis = chart.xAxes.push(new am4charts.ValueAxis()); 
 valueAxis.renderer.grid.template.disabled = true;
+
 
 // Create series
 function createSeries(field, name) {
@@ -520,7 +732,6 @@ function createSeries(field, name) {
   series.sequencedInterpolation = true;
 
   var valueLabel = series.bullets.push(new am4charts.LabelBullet());
-  valueLabel.label.text = "{valueX}";
   valueLabel.label.horizontalCenter = "left";
   valueLabel.label.dx = 10;
   valueLabel.label.hideOversized = false;
@@ -528,7 +739,7 @@ function createSeries(field, name) {
 }
 
 chart.colors.list = [
-  am4core.color("#F8A091"),
+  am4core.color("#F7CDC6"),
   am4core.color("#FF7159"),
 ];
 
@@ -702,10 +913,9 @@ var series = chart.series.push(new am4charts.PieSeries());
 series.dataFields.value = "value";
 series.dataFields.category = "country";
 
-series.slices.template.cornerRadius = 10;
-series.slices.template.innerCornerRadius = 7;
 series.alignLabels = false;
-series.labels.template.padding(0,0,0,0);
+series.labels.template.disabled = true;
+series.ticks.template.disabled = true;
 
 series.labels.template.bent = true;
 series.labels.template.radius = 4;
@@ -727,6 +937,17 @@ series.ticks.template.disabled = true;
 series.hiddenState.properties.opacity = 1;
 series.hiddenState.properties.endAngle = -90;
 series.hiddenState.properties.startAngle = -90;
+series.legendSettings.valueText = " ";
+
+series.colors.list = [
+    am4core.color("#F7CDC6"),
+    am4core.color("#F8A091"),
+    am4core.color("#FF7159"),
+    am4core.color("#A6A6A6"),
+  ];
+  
+
+
 
 chart.legend = new am4charts.Legend();
       </script>
@@ -1092,7 +1313,7 @@ series4.columns.template.width = am4core.percent(50);
 series4.columns.template.tooltipText = "{name}: {valueY.value}";
 series4.name = "Verkauf online";
 series4.dataFields.categoryX = "category";
-series4.dataFields.valueY = "Verkauf onlines";
+series4.dataFields.valueY = "Verkauf online";
 series4.stacked = true;
 
 chart.responsive.enabled = true;
