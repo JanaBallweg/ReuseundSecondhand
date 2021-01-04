@@ -20,6 +20,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet"> 
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@300;400;600;700&family=Redressed&display=swap" rel="stylesheet"> 
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Julius+Sans+One&display=swap" rel="stylesheet"> 
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Vertical navigation dots - fullPage.js</title>
@@ -50,7 +54,7 @@
 <div id="fullpage">
 	<div class="section " id="section0">
 		<div class="intro">
-			<h1>Besitz, Kauf und Verkauf von gebrauchten </br>Produkten in Deutschland<h1></h1>
+			<h1 id="title">Besitz, Kauf und Verkauf von gebrauchten </br>Produkten in Deutschland<h1></h1>
 			
             <div class="startseite-img">
                 <img src="../images/Startseite3.PNG" width="1000" height="auto" >
@@ -440,7 +444,8 @@ chart.responsive.enabeled =true;
 		<div class="intro">
 			<h1>Kauf und Verkauf unbenutzer Produkte</h1>	
 			<h2>Die wichtigsten Vor-und Nachteile</h2>
-			<div id="text1">
+
+			<div id="vorteil1">
 			<div class="container-fluid position-relative" id="introchart">
 				<div class="row">
 					<div class="col-sm-5">
@@ -459,16 +464,15 @@ chart.responsive.enabeled =true;
 				</div>
 			</div>
 
-
-		<div id="text2">
+		<div id="vorteil2">
 			<div class="container-fluid position-relative" id="introchart">
 				<div class="row">
-					<div class="col-sm-5">
+					<div class="col-sm-6">
 					<div class="chartlayout"  id="chartdiv6"></div>
 						<p><strong>Vorteile Gebraucht-Kauf</strong></br>Der wichtigste Vorteil liegt beim Sparpotenzial. Dadurch können gebrauchte Produkte gekauft werden, die sich viele Leute neu nicht leisten können.</p>
 					</div>
 
-					<div class="col-sm-7" >
+					<div class="col-sm-6" >
 					 <div class="chartlayout" id="chartdiv7"></div> 
 						 <p><strong>Nachteile Gebraucht-Kauf</strong></p>
 						  <p>Spontan sind die größten Bedenken beim Gebraucht-Kauf: Zustand/Funktionalität/Beschädigung und Hygiene/Sauberkeit.</p>
@@ -477,18 +481,18 @@ chart.responsive.enabeled =true;
 				  </div>
 				</div>
 			</div>
-			<button type="button" class="btn btn-lg" id="Kauf" onclick="toggleParagraph(1, 2)">Gebraucht-Kauf</button>
-			<button type="button" class="btn btn-lg" id="Verkauf" onclick="toggleParagraph(2, 1)">Gebraucht-Verkauf</button>
+			<button type="button" class="btn btn-lg"  onclick="toggleParagraph(1, 2)">Gebraucht-Kauf</button>
+			<button type="button" class="btn btn-lg" onclick="toggleParagraph(2, 1)">Gebraucht-Verkauf</button>
 		</div>
+		
 
-
- <!--Javaskriptbuttons-->
- <script>
-	function toggleParagraph(nbrShow, nbrHide) {
-		document.getElementById("text" + nbrHide).style.display = "none";
-	  document.getElementById("text" + nbrShow).style.display = "block";
-	}
-	</script>
+		<script>
+			function toggleParagraph(nbrShow, nbrHide) {
+			document.getElementById("vorteil" + nbrHide).style.display = "none";
+		  document.getElementById("vorteil" + nbrShow).style.display = "block";
+		}
+		</script>
+ 
  
 	 <!--Vorteile Gebrauchtkauf-->
 	
@@ -578,7 +582,7 @@ chart.responsive.enabeled =true;
 		"reason": "Sonstiges",
 		"percent": 2
 	},	{
-		"reason": "Gebraucht-Kauf nur für Leute, die sich etwas Neues nicht leisten können",
+		"reason": "Nur für Leute, die sich etwas Neues nicht leisten können",
 		"percent": 4
 	}, {
 		"reason": "Die Kommunikation mit dem Verkäufer ist anstrengend",
@@ -599,7 +603,7 @@ chart.responsive.enabeled =true;
 		"reason": "Keine Angaben über vorherige Nutzung",
 		"percent": 33
 	}, {
-		"reason": "Bedenken, ob Produkte sind wie beschrieben siend",
+		"reason": "Bedenken, ob Produkte sind wie beschrieben sind",
 		"percent": 34
 	}, {
 		"reason": "Bedenken bei der Vertrauenswürdigkeit des Verkäufers",
@@ -667,8 +671,8 @@ chart.responsive.enabeled =true;
 						<div class="chartlayout" id="chartdiv8"></div>
 					</div>
 					<div class="col-md-3">
-						<button type="button" class="btn btn-lg" id="Kauf" onclick="toggleParagraph(1, 2);">Altersklasse</button>
-			<button type="button" class="btn btn-lg" id="Verkauf" onclick="toggleParagraph(2, 1);">Geschlecht</button>
+						<button type="button" class="btn btn-lg" id="Kauf" onclick="toggleParagraph2(1, 2);">Altersklasse</button>
+			<button type="button" class="btn btn-lg" id="Verkauf" onclick="toggleParagraph2(2, 1);">Geschlecht</button>
 					
 						<p id="caption1">
 							Die jüngere Generation, die <strong>16-29-Jährigen</strong>, kaufen häufiger gebrauchte<strong> Kleidung</strong> (31% vs. 32%) und gebrauchte <strong>Videospiele/Spielzeug </strong> (28% vs. 18%)als <strong>über 30-Jährige.</strong> Diese kaufen dagegen häufiger <strong> CDs/DVDs </strong> (31% vs. 25%)und <strong>Fahrzeuge </strong> (27% vs. 19%) gebraucht.
@@ -679,7 +683,7 @@ chart.responsive.enabeled =true;
 						  </p>
 				  </div>
 				  <script>
-					function toggleParagraph(nbrShow, nbrHide) {
+					function toggleParagraph2(nbrShow, nbrHide) {
 					document.getElementById("caption" + nbrHide).style.display = "none";
 				  document.getElementById("caption" + nbrShow).style.display = "block";
 				}

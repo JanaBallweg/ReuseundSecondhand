@@ -137,6 +137,13 @@ p{
 		
 	}
 
+	#title{
+font-size:4em;
+line-height:1.5em;
+
+
+	}
+
 	h2{
 		font-size: 1.5em;
 		font-family:'Roboto';
@@ -180,14 +187,19 @@ p{
         
 	}
 
-	#chartdiv4, #chartdiv5 {
-		width: 100%;
-        max-width:800px;
-      max-height: 400px;
-      height: 70vh;
-        font-size: 15px;
-        background-color: #ffffff;
-		overflow: hidden;	 
+	#chartdiv4{
+		width: 120%;
+        max-width:50em;
+      max-height:50em ;
+      height: 60vh;}
+      
+
+	 #chartdiv5{
+
+		width: 150%;
+        max-width:50em;
+      max-height:50em ;
+      height: 60vh;
 	 }
 	
 	 #chartdiv10 {
@@ -228,6 +240,7 @@ p{
 
 	
 	.intro{
+		max-height: 80%;
 		margin-top:3em;
 		text-align:left;
 		margin-left:5.5em;
@@ -246,7 +259,6 @@ p{
 
 	#introchart{
 
-		margin-top:3em;
 		text-align:left;
 		margin-left:2em;
 		margin-right:4em;
@@ -289,7 +301,7 @@ p{
 }
 
 
-#text2 {
+#vorteil2 {
 	display: none;
   }
 
@@ -328,9 +340,9 @@ p{
 
    .startseite-img{
     position: absolute;
-    bottom: 0px;
-    left: 350px;
-    right: 10px;
+    bottom: 0em;
+    left: 30em;
+    right: 10em;
     margin: auto;
     justify-content: center;
 }
@@ -344,7 +356,7 @@ p{
 
 .logo-img{
     position:absolute;
-    left:8%;
+	left:6%;
     bottom:4%;
  }
 
