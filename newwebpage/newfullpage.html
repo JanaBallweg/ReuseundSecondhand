@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+<head>
+	 <!--bootrap-->
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	 <!--stylen-->
+ 
+<link rel="stylesheet" type="text/css" href="css-fullpage/fullpage.min.css" />
+<link rel="stylesheet" type="text/css" href="css-fullpage/style.css" />
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet"> 
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet"> 
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet"> 
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@300;400;600;700&family=Redressed&display=swap" rel="stylesheet"> 
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Vertical navigation dots - fullPage.js</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage full-screen navigation and sections control menu." />
+	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
+	<meta name="Resource-type" content="Document" />
+
+	<!--AMcharts-Bibliothek-->
+	<script src="../amcharts4/core.js"></script>
+	<script src="../amcharts4/charts.js"></script>
+	  <script src="../amcharts4/themes/animated.js"></script>  
+
+	  
+
+	 
+
+
+	<link rel="stylesheet" type="text/css" href="dist/fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+	
+</head>
+
+
+
+<body>
+<!--section0-startseite-->
+<div id="fullpage">
+	<div class="section " id="section0">
+		<div class="intro">
+			<h1>Besitz, Kauf und Verkauf von gebrauchten </br>Produkten in Deutschland<h1></h1>
+			
+            <div class="startseite-img">
+                <img src="../images/Startseite3.PNG" width="800" height="auto" >
+            </div>
+            
+		</div>
+	</div>
+
+<!--section1-DieStudie-->
+	<div class="section " id="section1">
+		
+		<div class="intro">
+			<h1>Die Studie</h1>
+			<p>An easy and beautiful way to navigate throw the sections</p>
+		</div>
+	</div>
+
+	<!--section2-Besitz-->
+	<div class="section" id="section2">
+	    <div class="slide" id="slide1">
+			<div class="intro">
+			<h1>Besitz gebrauchter Produkte</h1>	
+			<h2>Produktkategorien, die die Befragten seit mind. 12 Monaten nicht mehr genutzt haben</h2>
+				
+
+				<div class="container-fluid position-relative">
+					<div class="row">
+					<div class="col-md-9">
+						<div  id="chartdiv1"></div>
+					</div>
+					<div class="col-md-3">
+						<p>
+							Mit 62 % sind <strong>CDs, DVDs </strong>und <strong>Bücher</strong> die häufigsten Produkte, die seit mindestens 12 Monaten nicht mehr benutzt wurden.
+							 Weitere 10 % gaben an keine Produkte nicht zu nutzen.
+						</p>
+					</div>
+				  </div>
+			
+			</div>
+	
+
+		<!--shirinsdiagramm 1-->
+		<script>
+
+
+            am4core.useTheme(am4themes_animated);
+    
+            var chart = am4core.create("chartdiv1", am4charts.XYChart);
+
+
+chart.colors.saturation = 0.4;
+
+chart.data = [{ 
+	"reason": "Sonstiges",
+	"percent": 9
+}, { 
+	"reason": "Elektronische Großgeräte (z.B. Kühlschränke)",
+	"percent": 6
+},	{
+	"reason": "Fahrzeuge",
+	"percent": 6
+}, {
+	"reason": "Fahrzeugteile & Zubehör",
+	"percent": 8
+}, {
+	"reason": "Baby-/Kinderausstattung und -kleidung",
+	"percent": 14
+}, {
+	"reason": "Musikinstrumente",
+	"percent": 19
+}, {
+	"reason": "Dekoration, Möbel",
+	"percent": 20
+},{
+	"reason": "Sammlerstücke, Antiquitäten",
+	"percent": 20
+},{
+	"reason": "Werkzeuge, Gartengeräte, DIY-Zubehör",
+	"percent": 23
+}, {
+	"reason": "Smartphones, Tablets",
+	"percent": 25
+}, {
+	"reason": "Sportequipment",
+	"percent": 26
+}, {
+	"reason": "Elektrogeräte (ink. PCs, Radios)",
+    "percent": 27
+}, {
+	"reason": "Videospiele, Spielzeuge",
+    "percent": 31
+}, {
+	"reason": "Fotoapparate & Zubehör",
+    "percent": 34
+}, {
+	"reason": "Kleider, Schuhe, Accessoires",
+    "percent": 57
+}, {
+	"reason": "Bücher",
+    "percent": 58
+}, {
+	"reason": "CDs, DVDs, BlueRays",
+    "percent": 62
+}];
+
+
+var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+categoryAxis.renderer.grid.template.location = 0;
+categoryAxis.dataFields.category = "reason";
+categoryAxis.renderer.minGridDistance = 20;
+categoryAxis.renderer.grid.template.disabled = true;
+
+
+var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
+valueAxis.renderer.maxLabelPosition = 0.98;
+  valueAxis.tooltip.disabled = true;
+valueAxis.renderer.grid.template.disabled = true;
+
+var series = chart.series.push(new am4charts.ColumnSeries());
+series.dataFields.categoryY = "reason";
+series.dataFields.valueX = "percent";
+series.tooltipText = "{valueX}";
+series.sequencedInterpolation = true;
+series.defaultState.transitionDuration = 1000;
+series.sequencedInterpolationDelay = 100;
+series.columns.template.strokeOpacity = 0;
+series.fill = am4core.color("#838097");
+
+series.tooltipText = "{valueX}";
+
+chart.cursor = new am4charts.XYCursor();
+chart.cursor.lineY.disabled = true;
+chart.cursor.lineX.disabled = true;
+
+chart.responsive.enabled = true;
+  </script>
+		</div>
+	</div>
+
+	    <div class="slide" id="slide2">
+			<div class="intro">
+				<h1>Besitz gebrauchter Produkte</h1>
+			<h2>Besitz gerauchter vfgbgbgfbgfbProdukte</h2>
+		</div>
+	</div>
+
+	</div>
+	<div class="section" id="section3">
+		<div class="intro">
+			<h1>Enjoy it</h1>
+		</div>
+	</div>
+
+
+	<div class="section" id="section4">
+		<div class="intro">
+			<h1>Enjoy it</h1>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="dist/fullpage.js"></script>
+<script type="text/javascript" src="examples.js"></script>
+
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        anchors: ['firstPage', 'secondPage', '3rdPage'],
+        sectionsColor: ['#fff', '#fff', '#fff'],
+        navigation: true,
+        navigationPosition: 'right',
+        navigationTooltips: ['Home', 'Die Studie', 'Besitz', 'Kauf&Verkauf', 'Impressum']
+    });
+</script>
+
+</body>
+</html>

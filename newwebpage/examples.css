@@ -1,0 +1,224 @@
+@CHARSET "ISO-8859-1";
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+	margin-top: 0;
+
+}
+
+
+a{
+	text-decoration:none;
+}
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+	font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
+
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    color:rgb(0, 0, 0);
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+
+
+/* Custom CSS
+ * --------------------------------------- */
+body{
+	font-family: arial,helvetica;
+	color: #333;
+	color: rgba(0,0,0,0.5);
+}
+.wrap{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	position: relative;
+}
+
+p{
+	font-size: 2em;
+}
+.intro p{
+	width: 100%;
+	
+}
+.section{
+	text-align:left;
+}
+#menu li {
+	display:inline-block;
+	margin: 10px;
+	color: #000;
+	background:#fff;
+	background: rgba(255,255,255, 0.5);
+	-webkit-border-radius: 10px;
+            border-radius: 10px;
+}
+#menu li.active{
+	background:#666;
+	background: rgba(0,0,0, 0.5);
+	color: #fff;
+}
+#menu li a{
+	text-decoration:none;
+	color: #000;
+}
+#menu li.active a:hover{
+	color: #000;
+}
+#menu li:hover{
+	background: rgba(255,255,255, 0.8);
+}
+#menu li a,
+#menu li.active a{
+	padding: 9px 18px;
+	display:block;
+}
+#menu li.active a{
+	color: #fff;
+}
+#menu{
+	position:fixed;
+	top:0;
+	left:0;
+	height: 40px;
+	z-index: 70;
+	width: 100%;
+	padding: 0;
+	margin:0;
+}
+
+
+
+
+ 
+
+/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 3em;
+		font-family:'Roboto';
+		font-weight: 700;
+		color:#689195;
+		
+	
+		
+	}
+
+	h2{
+		font-size: 1.5em;
+		font-family:'Roboto';
+		font-weight:500;
+		color: rgb(69, 69, 69);
+	
+	}
+
+
+
+	
+	/* --------------------------------------- */
+	
+	
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+
+	}
+
+	/* Overwriting styles for control arrows for slides
+	* --------------------------------------- */
+	.controlArrow.prev {
+		left: 70px;
+	}
+	.controlArrow.next{
+		right: 70px;
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+
+	
+
+	#chartdiv1 {
+        width: 100%;
+        max-width:auto;
+      max-height: 800px;
+      height: 80vh;
+        font-size: 15px;
+        background-color: #ffffff;
+        overflow: hidden;
+        
+    }
+	
+	.intro{
+margin-top:3em;
+text-align:left;
+margin-left:5.5em;
+margin-right:12em;
+	}
+
+	.intro p{
+		color: rgb(17, 17, 17);
+		font-size: 1.1em;
+		margin-top:10em;
+		text-align:left;
+		vertical-align: middle;}
+
+
+	.fp-controlArrow.fp-prev{
+		left:50px;
+		border-color: transparent #689195  transparent transparent;
+	  
+		border-width: 20px 20px 20px 0;
+		
+	}
+	
+	.fp-controlArrow.fp-next{
+		right:70px;
+		border-color: transparent transparent transparent #689195;
+		border-width: 20px 0 20px 20px;
+		}
+	
+
+		#fp-nav ul li .fp-tooltip{
+    color:#DB7261;
+}
+
+
+#fp-nav ul li a span,.fp-slidesNav ul li a span:hover{
+
+    background:#DB7261;
+}
+
+
+	
