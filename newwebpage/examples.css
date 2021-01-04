@@ -182,13 +182,44 @@ p{
       height: 70vh;
         font-size: 15px;
         background-color: #ffffff;
-		overflow: hidden;
-	
-      
-		
-		 
+		overflow: hidden;	 
 	 }
 	
+	 #chartdiv10 {
+		width: 100%;
+        max-width:600px;
+      max-height: 400px;
+      height: 100vh;
+        
+	 }
+
+	 #chartdiv11, #chartdiv12 {
+		width: 100%;
+        max-width:700px;
+      max-height: 500px;
+      height: 60vh;
+        font-size: 15px;
+        background-color: #ffffff;
+		overflow: hidden;	 
+	 }
+	 #chartdiv13 {
+		width: 100%;
+        max-width:700px;
+      max-height: 420px;
+      height: 80vh;
+        font-size: 15px;
+        background-color: #ffffff;
+		overflow: hidden;	 
+	 }
+	 #chartdiv14 {
+		width: 100%;
+        max-width:700px;
+      max-height: 420px;
+      height: 80vh;
+        font-size: 15px;
+        background-color: #ffffff;
+		overflow: hidden;	 
+	 }
 
 	
 	.intro{
@@ -202,9 +233,8 @@ p{
 	.intro p{
 		color: rgb(17, 17, 17);
 		font-size: 1.1em;
-		margin-top:10em;
+		margin-top:1em;
 		text-align:left;
-		vertical-align: center;
 		font-family:'Open Sans';
 
 	}
@@ -219,6 +249,11 @@ p{
 
 	.textbottom{
 		margin-top:30em;
+	}
+
+	.textwithoutmargin{
+		margin-top:1em;
+
 	}
 
 		

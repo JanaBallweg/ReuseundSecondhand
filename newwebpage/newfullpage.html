@@ -412,7 +412,7 @@ chart.responsive.enabeled =true;
 	
 <div class="section" id="section3">
 	<!--SLIDE 1-section3-Kauf/Verkauf--------------------------------->	
-	<div class="slide" id="slide1">
+	<div class="slide" id="slide4">
 		<div class="intro">
 			<h1>Kauf und Verkauf unbenutzer Produkte</h1>	
 			<h2>Die wichtigsten Vor-und Nachteile</h2>
@@ -633,7 +633,7 @@ chart.responsive.enabeled =true;
 </div>
 
 		<!--SLIDE 2-section3-Kauf/Verkauf--------------------------------->	
-	    <div class="slide" id="slide1">
+	    <div class="slide" id="slide5">
 			<div class="intro">
 				<h1>Kauf und Verkauf unbenutzer Produkte</h1>	
 				<h2>Kauf gebrauchter Produkte</h2>
@@ -789,37 +789,121 @@ chart.responsive.enabeled =true;
 		</div>
 
 		<!--SLIDE 3-section3-Kauf/Verkauf--------------------------------->	
-	    <div class="slide" id="slide1">
-			<div class="intro">
-				<h1>Kauf und Verkauf unbenutzer Produkte</h1>	
-				<h2>Verkaufte Produkte in den letzen 12 Monaten</h2>
-			</div>
+<div class="slide" id="slide6">
+	<div class="intro">
+		<h1>Kauf und Verkauf unbenutzer Produkte</h1>	
+		<h2>Verkaufte Produkte in den letzen 12 Monaten</h2>
+			<div class="container-fluid position-relative">
+				<div class="row">
+				<div class="col-md-9">
+					<div class="chartlayout" id="chartdiv9"></div>
+				</div>
+				<div class="col-md-3">
+					<p>
+						Bezüglich der verkauften Produktkategorien der letzten 12 Monate handelt es sich bei 40 % der verkauften Waren um Bücher, bei 36 % um Kleidung,
+            Schuhe und Accessoires und bei 30 % um CDs, DVDs oder Blu-Rays. Diese decken sich teilweise mit den Angaben zum Kauf gebrauchter Produkte. </p> 
+					</p>
+				</div>
+			  </div>
 		</div>
 
+	<!--shirinsdiagramm 1-->
+	<script>
 
-		<!--SLIDE 4-section3-Kauf/Verkauf--------------------------------->	
-	    <div class="slide" id="slide1">
-			<div class="intro">
-				<h1>Kauf und Verkauf unbenutzer Produkte</h1>	
-				<h2>Verkaufte Produkte in den letzen 12 Monaten</h2>
-			</div>
-		</div>
 
-		<!--SLIDE 5-section3-Kauf/Verkauf--------------------------------->	
-	    <div class="slide" id="slide1">
-			<div class="intro">
-				<h1>Kauf und Verkauf unbenutzer Produkte</h1>	
-				<h2>Häufigkeit der Gebraucht-Käufe</h2>
-			</div>
-		</div>
+am4core.useTheme(am4themes_animated);
 
-		<!--SLIDE6 -section3-Kauf/Verkauf--------------------------------->	
-	    <div class="slide" id="slide1">
-			<div class="intro">
-				<h1>Kauf und Verkauf unbenutzer Produkte</h1>	
-				<h2>Beliebte Second-Hand-Einkaufsstätten</h2>
-			</div>
-		</div>
+var chart = am4core.create("chartdiv9", am4charts.XYChart);
+
+
+chart.colors.saturation = 0.4;
+
+chart.data = [{ 
+    "reason": "Sonstiges",
+	"percent": 17
+}, { 
+	"reason": "Elektronische Großgeräte (z.B. Kühlschränke)",
+	"percent": 2
+},	{
+	"reason": "Fahrzeuge",
+	"percent": 3
+}, {
+	"reason": "Fahrzeugteile & Zubehör",
+	"percent": 5
+}, {
+	"reason": "Baby-/Kinderausstattung und -kleidung",
+	"percent": 6
+}, {
+	"reason": "Musikinstrumente",
+	"percent": 6
+}, {
+	"reason": "Dekoration, Möbel",
+	"percent": 6
+},{
+	"reason": "Sammlerstücke, Antiquitäten",
+	"percent": 6
+},{
+	"reason": "Werkzeuge, Gartengeräte, DIY-Zubehör",
+	"percent": 11
+}, {
+	"reason": "Smartphones, Tablets",
+	"percent": 11
+}, {
+	"reason": "Sportequipment",
+	"percent": 12
+}, {
+	"reason": "Elektrogeräte (ink. PCs, Radios)",
+    "percent": 15
+}, {
+	"reason": "Videospiele, Spielzeuge",
+    "percent": 21
+}, {
+	"reason": "Fotoapparate & Zubehör",
+    "percent": 24
+}, {
+	"reason": "Kleider, Schuhe, Accessoires",
+    "percent": 30
+}, {
+	"reason": "Bücher",
+    "percent": 36
+}, {
+	"reason": "CDs, DVDs, BlueRays",
+    "percent": 40
+}];
+
+
+var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+categoryAxis.renderer.grid.template.location = 0;
+categoryAxis.dataFields.category = "reason";
+categoryAxis.renderer.minGridDistance = 20;
+categoryAxis.renderer.grid.template.disabled = true;
+
+var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
+valueAxis.renderer.maxLabelPosition = 0.98;
+valueAxis.tooltip.disabled = true;
+valueAxis.renderer.grid.template.disabled = true;
+
+var series = chart.series.push(new am4charts.ColumnSeries());
+series.dataFields.categoryY = "reason";
+series.dataFields.valueX = "percent";
+series.tooltipText = "{valueX}";
+series.sequencedInterpolation = true;
+series.defaultState.transitionDuration = 1000;
+series.sequencedInterpolationDelay = 100;
+series.columns.template.strokeOpacity = 0;
+
+
+
+
+series.tooltipText = "{valueX}";
+
+chart.cursor = new am4charts.XYCursor();
+chart.cursor.lineY.disabled = true;
+chart.cursor.lineX.disabled = true;
+
+series.fill = am4color.color("#F8A091");
+
+</script>
 	</div>
 
 
@@ -828,24 +912,473 @@ chart.responsive.enabeled =true;
 
 
 
+</div>
+
+
+		<!--SLIDE 4-section3-Kauf/Verkauf--------------------------------->	
+	    <div class="slide" id="slide6">
+			<div class="intro">
+				<h1>Kauf und Verkauf unbenutzer Produkte</h1>	
+				<h2>Kauf von gebrauchten Produkten in den letzten 12 Monaten</h2>
+					<div class="container-fluid position-relative">
+						<div class="row">
+						<div class="col-md-6">
+							<div class="chartlayout" id="chartdiv10"></div>
+						</div>
+						<div class="col-md-6">
+							<img src="../images/Vorsätze.png" width="600" height="auto" >
+						</div>
+					  </div>
+					  <div class="textwithoutmargin">
+					  <p>Bezüglich der verkauften Produktkategorien der letzten 12 Monate handelt es sich bei 40 % der verkauften Waren um Bücher, bei 36 % um Kleidung,
+						Schuhe und Accessoires und bei 30 % um CDs, DVDs oder Blu-Rays. Diese decken sich teilweise mit den Angaben zum Kauf gebrauchter Produkte. </p> 
+								</p>
+							</div>
+				</div>
+		
+			<!--shirinsdiagramm 1-->
+			<script>
+		
+		
+		am4core.useTheme(am4themes_animated);
+
+var chart = am4core.create("chartdiv10", am4charts.PieChart);
+
+
+chart.data = [{
+    "country": "Ja, ich kaufe Produkte wiederholt gebraucht",
+    "value": 296.67
+}, {
+    "country": "Ja, ich habe mindestens einmal etwas Gebrauchtes gekauft",
+    "value": 225.06
+}, {
+    "country": "Nein",
+    "value": 480.81
+}, {
+    "country": "Weiß nicht / keine Angabe",
+    "value": 20.46
+}];
+
+chart.innerRadius = am4core.percent(50);
+
+var series = chart.series.push(new am4charts.PieSeries());
+series.dataFields.value = "value";
+series.dataFields.category = "country";
+
+series.alignLabels = false;
+series.labels.template.disabled = true;
+series.ticks.template.disabled = true;
+
+series.labels.template.bent = true;
+series.labels.template.radius = 4;
+
+series.slices.template.states.getKey("hover").properties.scale = 1.1;
+series.labels.template.states.create("hover").properties.fill = am4core.color("#fff");
+
+series.slices.template.events.on("over", function (event) {
+    event.target.dataItem.label.isHover = true;
+})
+
+series.slices.template.events.on("out", function (event) {
+    event.target.dataItem.label.isHover = false;
+})
+
+series.ticks.template.disabled = true;
+
+// this creates initial animation
+series.hiddenState.properties.opacity = 1;
+series.hiddenState.properties.endAngle = -90;
+series.hiddenState.properties.startAngle = -90;
+series.legendSettings.valueText = " ";
+
+series.colors.list = [
+    am4core.color("#F7CDC6"),
+    am4core.color("#F8A091"),
+    am4core.color("#FF7159"),
+    am4core.color("#A6A6A6"),
+  ];
+  
 
 
 
+chart.legend = new am4charts.Legend();
+		
+		</script>
+			</div>
 
+		
+		</div>
+		<!--SLIDE 5-section3-Kauf/Verkauf--------------------------------->	
+	    <div class="slide" id="slide6">
+			<div class="intro">
+				<h1>Kauf und Verkauf unbenutzer Produkte</h1>	
+				<div class="row">
+					<div class="col-sm-6">
+						<h2>Häufigkeit der Gebraucht-Käufe</h2> 
+					</div>
+						<div class="col-sm-6">
+							<h2>Häufigkeit der Gebraucht-Käufe</h2>
+						 </div>
+				</div>
+							
 
+				
+					<div class="container-fluid position-relative">
+						<div class="row">
+							<div class="col-sm-6">
+							
+							  <div class="chartlayout"  id="chartdiv11"></div>
+							 
+							</div>
+							<div class="col-sm-6" >
+							 
+							  <div  class="chartlayout" id="chartdiv12"></div>
+							</div>
+						</div>
+					
+						<div class="row">
+						   <div class="col-sm-6">          
+								<p>Die Mehrheit der Personen (49%) kauft selten gebrauchte Produkte. Ca. 29% kaufen alle 2-3 Monate.</p>
+						   </div>
+					
+							  
+						   <div class="col-sm-6" >
+							  <p>Die Mehrheit der Personen (30%) verkauft mehr als viermal im Jahr gebrauchte Produkte.</p>
+						  </div>
+					
+						</div> 
+				</div>
+				<script>
 
+					am4core.useTheme(am4themes_animated);
+					
+					var chart = am4core.create("chartdiv11", am4charts.XYChart);
+					
+					
+					chart.colors.saturation = 0.4;
+					
+					chart.data = [{ 
+						"reason": "Weiß nicht/keine Angabe",
+						"percent": 5
+					}, {
+						"reason": "Nie",
+						"percent": 15
+					}, {
+						"reason": "Selten",
+						"percent": 40
+					}, {
+						"reason": "Einmal alle 6 Monate",
+						"percent": 10
+					}, {
+						"reason": "Einmal alle 2-3 Monate",
+						"percent": 20
+					}, {
+						"reason": "1-3x pro Monat",
+						"percent": 7
+					}, {
+						"reason": "Wöchentlich",
+						"percent": 2
+					}, {
+						"reason": "2-6x pro Woche",
+						"percent": 1
+					}, {
+						"reason": "Täglich",
+						"percent": 1
+					}];
+					
+					
+					var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+					categoryAxis.renderer.grid.template.location = 0;
+					categoryAxis.dataFields.category = "reason";
+					categoryAxis.renderer.minGridDistance = 20;
+					categoryAxis.renderer.grid.template.disabled = true;
+					
+					var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
+					valueAxis.renderer.maxLabelPosition = 0.98;
+					valueAxis.tooltip.disabled = true;
+					valueAxis.renderer.grid.template.disabled = true;
+					
+					var series = chart.series.push(new am4charts.ColumnSeries());
+					series.dataFields.categoryY = "reason";
+					series.dataFields.valueX = "percent";
+					series.tooltipText = "{valueX}";
+					series.sequencedInterpolation = true;
+					series.defaultState.transitionDuration = 1000;
+					series.sequencedInterpolationDelay = 100;
+					series.columns.template.strokeOpacity = 0;
+					
+					
+					
+					series.tooltipText = "{valueX}";
+					
+					chart.cursor = new am4charts.XYCursor();
+					chart.cursor.lineY.disabled = true;
+					chart.cursor.lineX.disabled = true;
+					
+					series.fill = am4color.color("#F8A091");
+					 </script>
+					
+					<script>
+					am4core.useTheme(am4themes_animated);
+					
+					var chart = am4core.create("chartdiv12", am4charts.XYChart);
+					
+					
+					chart.colors.saturation = 0.4;
+					
+					chart.data = [{ 
+						"reason": "Weiß nicht/keine Angabe",
+						"percent": 4
+					}, {
+						"reason": "Mehr als 4x im Jahr",
+						"percent": 30
+					}, {
+						"reason": "3-4x im Jahr",
+						"percent": 23
+					}, {
+						"reason": "2x im Jahr",
+						"percent": 16
+					}, {
+						"reason": "1x im Jahr",
+						"percent": 10
+					}, {
+						"reason": "Selterner als 1x im Jahr",
+						"percent": 17
+					}];
+					
+					
+					var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+					categoryAxis.renderer.grid.template.location = 0;
+					categoryAxis.dataFields.category = "reason";
+					categoryAxis.renderer.minGridDistance = 20;
+					am4core.useTheme(am4themes_animated);
+					categoryAxis.renderer.grid.template.disabled = true;
+					
+					
+					var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
+					valueAxis.renderer.maxLabelPosition = 0.98;
+					valueAxis.tooltip.disabled = true;
+					valueAxis.renderer.grid.template.disabled = true;
+					
+					var series = chart.series.push(new am4charts.ColumnSeries());
+					series.dataFields.categoryY = "reason";
+					series.dataFields.valueX = "percent";
+					series.tooltipText = "{valueX.value}";
+					series.sequencedInterpolation = true;
+					series.defaultState.transitionDuration = 1000;
+					series.sequencedInterpolationDelay = 100;
+					series.columns.template.strokeOpacity = 0;
+					
+					
+					
+					series.tooltipText = "{valueX}";
+					
+					chart.cursor = new am4charts.XYCursor();
+					chart.cursor.lineY.disabled = true;
+					chart.cursor.lineX.disabled = true;
+					
+					series.fill = am4color.color("#F8A091");
+					
+					
+					
+					</script>	
+			
 
+			</div>
 
+		
+		</div>
 
+		<!--SLIDE6 -section3-Kauf/Verkauf--------------------------------->	
+	    <div class="slide" id="slide1">
+			<div class="intro">
+				<h1>Kauf und Verkauf unbenutzer Produkte</h1>	
+				<h2>Beliebte Second-Hand-Einkaufsstätten</h2>
 
+				<div class="container-fluid position-relative">
+					<div class="row">
+						<div class="col-sm-7">
+						
+						  <div class="chartlayout" id="chartdiv13"></div>
+						  <p>Verkauft wurden ungenutzte Produkte von 46 % der Personen über eine Online-Kleinanzeigenseite (30 %), 
+							über einen Online-Marktplatz (21 %), über einen Ankaufsdienst (8 %), auf einem Flohmarkt (3 %) oder über eine Zeitungsannonce (1 %)</p>
+						 
+						</div>
+						<div class="col-sm-5" >
+							
+						 
+						  <div class="chartlayout"  id="chartdiv14"></div>
+						  <p>Die Mehrheit (78%) der Befragten bevorzugt zum Verkauf gebrauchter Produkte Online-Kanäle.</p>
+						</div>
+					</div>
+			</div>
 
+			<script>
 
-
-
-
-
-
-
+				am4core.useTheme(am4themes_animated);
+				
+				var chart = am4core.create("chartdiv13", am4charts.XYChart);
+				
+				
+				chart.colors.saturation = 0.4;
+				
+				chart.data = [{ 
+					"reason": "Weiß nicht/keine Angabe",
+					"percent": 4
+				}, {
+					"reason": "Habe in den letzten 12 Monaten keine gebrauchten Waren gekauft",
+					"percent": 40
+				}, {
+					"reason": "Sonstiges",
+					"percent": 4
+				}, {
+					"reason": "Pfandhaus",
+					"percent": 1
+				}, {
+					"reason": "Kleinanzeigen in Zeitungen",
+					"percent": 4
+				}, {
+					"reason": "Gebruachtwarenladen mit wohltätigem Hintergrund",
+					"percent": 6
+				}, {
+					"reason": "Sonstige Webseite",
+					"percent": 7
+				}, {
+					"reason": "Sonstige Kleinanzeigen-Portale im Internet",
+					"percent": 7
+				}, {
+					"reason": "Freunde/Familie",
+					"percent": 8
+				}, {
+					"reason": "Flohmarkt/Garagen Verkauf",
+					"percent": 11
+				}, {
+					"reason": "Ebay/Ebay Kleinanzeigen",
+					"percent": 45
+				}];
+				
+				
+				var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+				categoryAxis.renderer.grid.template.location = 0;
+				categoryAxis.dataFields.category = "reason";
+				categoryAxis.renderer.minGridDistance = 20;
+				categoryAxis.renderer.grid.template.disabled = true;
+				
+				var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
+				valueAxis.renderer.maxLabelPosition = 0.98;
+				valueAxis.tooltip.disabled = true;
+				valueAxis.renderer.grid.template.disabled = true;
+				
+				var series = chart.series.push(new am4charts.ColumnSeries());
+				series.dataFields.categoryY = "reason";
+				series.dataFields.valueX = "percent";
+				series.tooltipText = "{valueX.value}";
+				series.sequencedInterpolation = true;
+				series.defaultState.transitionDuration = 1000;
+				series.sequencedInterpolationDelay = 100;
+				series.columns.template.strokeOpacity = 0;
+				
+				
+				
+				
+				series.tooltipText = "{valueX}";
+				
+				chart.cursor = new am4charts.XYCursor();
+				chart.cursor.lineY.disabled = true;
+				chart.cursor.lineX.disabled = true;
+				
+				series.fill = am4color.color("#F8A091");
+				
+				 </script>
+				
+				<script>
+				am4core.useTheme(am4themes_animated);
+				
+				var chart = am4core.create("chartdiv14", am4charts.XYChart);
+				
+				chart.width = 500;
+				
+				chart.data = [{
+					"category": "",
+					"Weiß nicht / keine Angabe": 2,
+					"Verkauf online und offline": 15,
+					"Verkauf offline": 5,
+					"Verkauf online": 78
+				}]
+				
+				chart.padding(30, 30, 10, 30);
+				chart.legend = new am4charts.Legend();
+				chart.legend.position = "bottom";
+				chart.legend.contentAlign = "left";
+				
+				// Modify chart's colors
+				chart.colors.list = [
+					am4core.color("#7F7F7F"),
+					am4core.color("#C9C9C9"),
+					am4core.color("#689195"),
+					am4core.color("#9DC3E7"),
+				  ];
+				
+				var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+				categoryAxis.dataFields.category = "category";
+				categoryAxis.renderer.cellStartLocation = -0.5;
+				categoryAxis.renderer.minGridDistance = 60;
+				categoryAxis.renderer.grid.template.location = 0;
+				categoryAxis.interactionsEnabled = false;
+				categoryAxis.renderer.grid.template.disabled = true;
+				
+				var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+				valueAxis.tooltip.disabled = true;
+				valueAxis.renderer.grid.template.strokeOpacity = 0.05;
+				valueAxis.renderer.minGridDistance = 20;
+				valueAxis.interactionsEnabled = false;
+				valueAxis.min = 0;
+				valueAxis.renderer.minWidth = 35;
+				valueAxis.renderer.grid.template.disabled = true;
+				
+				var series1 = chart.series.push(new am4charts.ColumnSeries());
+				series1.columns.template.width = am4core.percent(50);
+				series1.columns.template.tooltipText = "{name}: {valueY.value}";
+				series1.name = "Weiß nicht / keine Angabe";
+				series1.dataFields.categoryX = "category";
+				series1.dataFields.valueY = "Weiß nicht / keine Angabe";
+				series1.stacked = true;
+				
+				var series2 = chart.series.push(new am4charts.ColumnSeries());
+				series2.columns.template.width = am4core.percent(50);
+				series2.columns.template.tooltipText = "{name}: {valueY.value}";
+				series2.name = "Verkauf online und offline";
+				series2.dataFields.categoryX = "category";
+				series2.dataFields.valueY = "Verkauf online und offline";
+				series2.stacked = true;
+				
+				var series3 = chart.series.push(new am4charts.ColumnSeries());
+				series3.columns.template.width = am4core.percent(50);
+				series3.columns.template.tooltipText = "{name}: {valueY.value}";
+				series3.name = "Verkauf offline";
+				series3.dataFields.categoryX = "category";
+				series3.dataFields.valueY = "Verkauf offline";
+				series3.stacked = true;
+				
+				var series4 = chart.series.push(new am4charts.ColumnSeries());
+				series4.columns.template.width = am4core.percent(50);
+				series4.columns.template.tooltipText = "{name}: {valueY.value}";
+				series4.name = "Verkauf online";
+				series4.dataFields.categoryX = "category";
+				series4.dataFields.valueY = "Verkauf online";
+				series4.stacked = true;
+				
+				chart.responsive.enabled = true;
+				
+				
+				
+				
+				
+				
+				</script>
+			</div>
+		</div>
+	</div>
 
 
 
