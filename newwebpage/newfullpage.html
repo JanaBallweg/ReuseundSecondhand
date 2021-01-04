@@ -46,7 +46,7 @@
 
 
 <body>
-<!--section0-startseite-->
+<!---------------------------------------------SECTION0-Startseite------------------------------------------------------------------------------------------------------------------------>
 <div id="fullpage">
 	<div class="section " id="section0">
 		<div class="intro">
@@ -59,7 +59,8 @@
 		</div>
 	</div>
 
-<!--section1-DieStudie-->
+<!-----------------------------------------------SECTION1-Die Studie------------------------------------------------------------------------------------------------------------------------>
+
 	<div class="section " id="section1">
 		
 		<div class="intro">
@@ -67,19 +68,20 @@
 			<p>An easy and beautiful way to navigate throw the sections</p>
 		</div>
 	</div>
+<!------------------------------------------------------SECTION2-Besitz------------------------------------------------------------------------------------------------------------------------>
 
-	<!--section2-Besitz-->
-	<div class="section" id="section2">
+<div class="section" id="section2">
+
+
+	<!--SLIDE 1-section2-Besitz--------------------------------->	
 	    <div class="slide" id="slide1">
 			<div class="intro">
 			<h1>Besitz gebrauchter Produkte</h1>	
 			<h2>Produktkategorien, die die Befragten seit mind. 12 Monaten nicht mehr genutzt haben</h2>
-				
-
 				<div class="container-fluid position-relative">
 					<div class="row">
 					<div class="col-md-9">
-						<div  id="chartdiv1"></div>
+						<div class="chartlayout" id="chartdiv1"></div>
 					</div>
 					<div class="col-md-3">
 						<p>
@@ -88,9 +90,7 @@
 						</p>
 					</div>
 				  </div>
-			
 			</div>
-	
 
 		<!--shirinsdiagramm 1-->
 		<script>
@@ -189,22 +189,668 @@ chart.responsive.enabled = true;
   </script>
 		</div>
 	</div>
-
+	<!--SLIDE 2-section2-Besitz-------------------------------->		
 	    <div class="slide" id="slide2">
 			<div class="intro">
-				<h1>Besitz gebrauchter Produkte</h1>
-			<h2>Besitz gerauchter vfgbgbgfbgfbProdukte</h2>
-		</div>
+				<h1>Besitz gebrauchter Produkte</h1>	
+				<h2>Wert der ungenutzten Produkte in Euro</h2>
+					<div class="container-fluid position-relative">
+						<div class="row">
+						<div class="col-md-9">
+							<div class="chartlayout" id="chartdiv2"></div>
+						</div>
+						<div class="col-md-3">
+							<p>
+							Knapp  <strong>die Hälfte der Befragten (47%) </strong>gibt an, ungenutzte Produkte mit einem Wert von <strong> unter 500 € </strong>zu besitzen. Darüber hinaus liegt bei <strong>einem Drittel</strong> der Wert ungenutzter Produkte bei <strong>über 500 €</strong>.
+                			<strong> Im Westen </strong> haben die ungenutzten Produkte vermehrt einen Wert von <strong>250-499 €</strong>. <strong>Im Osten </strong> hingegen liegt der Wert bei <strong>100-259 €</strong>.
+                			<strong>Der Deutsche </strong>besitzt im <strong>Durchschnitt </strong>ungenutzte Produkte im Wert von <strong>1.289 €</strong>.
+							</p>
+						</div>
+					  </div>
+				</div>
+			<!--shirinsdiagramm 2-->
+			<script>
+	am4core.useTheme(am4themes_animated);
+
+var chart = am4core.create("chartdiv2", am4charts.PieChart);
+
+
+chart.data = [{
+    "country": "<100 €",
+    "value": 122.76
+}, {
+    "country": "100-249 €",
+    "value": 163.68
+}, {
+    "country": "250-499 €",
+    "value": 194.37
+}, {
+    "country": "500-999 €",
+    "value": 153.48
+},{
+        "country": "1.000-2.499 €",
+        "value": 123.99
+    }, {
+        "country": "2.500-4.999 €",
+        "value": 51.15
+    }, {
+        "country": "5.000 € oder mehr",
+        "value": 40.92
+    },{
+        "country": "Weiß nicht/keine Angabe",
+        "value": 163.68
+
+    }];
+
+chart.innerRadius = am4core.percent(50);
+
+var series = chart.series.push(new am4charts.PieSeries());
+series.dataFields.value = "value";
+series.dataFields.category = "country";
+
+
+series.alignLabels = false;
+series.labels.template.disabled = true;
+series.ticks.template.disabled = true;
+
+series.labels.template.bent = true;
+series.labels.template.radius = 4;
+
+series.slices.template.states.getKey("hover").properties.scale = 1.1;
+series.labels.template.states.create("hover").properties.fill = am4core.color("#fff");
+
+series.slices.template.events.on("over", function (event) {
+    event.target.dataItem.label.isHover = true;
+})
+
+series.slices.template.events.on("out", function (event) {
+    event.target.dataItem.label.isHover = false;
+})
+
+series.ticks.template.disabled = true;
+
+// this creates initial animation
+series.hiddenState.properties.opacity = 1;
+series.hiddenState.properties.endAngle = -90;
+series.hiddenState.properties.startAngle = -90;
+series.legendSettings.valueText = " ";
+
+series.colors.list = [
+    am4core.color("#5F5F5F"),
+    am4core.color("#A6A6A6"),
+    am4core.color("#99D5DB"),
+    am4core.color("#56787D"),
+    am4core.color("#2B3C3E"),
+    am4core.color("#62795E"),
+    am4core.color("#87A682"),
+    am4core.color("#9EC398"),
+  ];
+  
+  
+
+
+chart.legend = new am4charts.Legend();
+chart.legend.legendSettings.valueText = false;
+chart.responsive.enabeled =true;
+	
+				
+	  </script>
+			</div>
 	</div>
 
+
+	<!--SLIDE 3-section2-Besitz-------------------------------->	
+<div class="slide" id="slide2">
+	<div class="intro">
+		<h1>Besitz gebrauchter Produkte</h1>	
+		<h2>Entsorgung unbenutzer Produkte</h2>
+			<div class="container-fluid position-relative">
+				<div class="row">
+				<div class="col-md-7">
+					<div class="chartlayout" id="chartdiv3"></div>
+				</div>
+				<div class="col-md-5">
+					<div class="textbottom">
+					<p>
+						Mit 62 % sind <strong>CDs, DVDs </strong>und <strong>Bücher</strong> die häufigsten Produkte, die seit mindestens 12 Monaten nicht mehr benutzt wurden.
+						Weitere 10 % gaben an keine Produkte nicht zu nutzen. </p> 
+					</div>
+				</div>
+			  </div>
+		</div>
+	<!--shirinsdiagramm 3-->
+	<script>
+		am4core.useTheme(am4themes_animated);
+	
+	var chart = am4core.create("chartdiv3", am4charts.XYChart);
+	
+	chart.width = 500;
+	
+	chart.data = [{
+		"category": "",
+		"Keine Entsorgung": 23,
+		"Hausmüll oder Wertstoffhof": 42,
+		"Verkauft": 46,
+		"Verschenkt": 48
+	}]
+	
+	chart.padding(30, 30, 10, 30);
+	chart.legend = new am4charts.Legend();
+	chart.legend.position = "bottom";
+	chart.legend.contentAlign = "left";
+	
+	// Modify chart's colors
+	chart.colors.list = [
+		am4core.color("#7F7F7F"),
+		am4core.color("#C9C9C9"),
+		am4core.color("#689195"),
+		am4core.color("#9DC3E7"),
+	  ];
+	
+	var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+	categoryAxis.dataFields.category = "category";
+	categoryAxis.renderer.cellStartLocation = -0.5;
+	categoryAxis.renderer.minGridDistance = 60;
+	categoryAxis.renderer.grid.template.location = 0;
+	categoryAxis.interactionsEnabled = false;
+	categoryAxis.renderer.grid.template.disabled = true;
+	
+	var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+	valueAxis.tooltip.disabled = true;
+	valueAxis.renderer.grid.template.strokeOpacity = 0.05;
+	valueAxis.renderer.minGridDistance = 20;
+	valueAxis.interactionsEnabled = false;
+	valueAxis.min = 0;
+	valueAxis.renderer.minWidth = 35;
+	valueAxis.renderer.grid.template.disabled = true;
+	
+	var series1 = chart.series.push(new am4charts.ColumnSeries());
+	series1.columns.template.width = am4core.percent(50);
+	series1.columns.template.tooltipText = "{name}: {valueY.value}";
+	series1.name = "Keine Entsorgung";
+	series1.dataFields.categoryX = "category";
+	series1.dataFields.valueY = "Keine Entsorgung";
+	series1.stacked = true;
+	
+	var series2 = chart.series.push(new am4charts.ColumnSeries());
+	series2.columns.template.width = am4core.percent(50);
+	series2.columns.template.tooltipText = "{name}: {valueY.value}";
+	series2.name = "Hausmüll oder Wertstoffhof";
+	series2.dataFields.categoryX = "category";
+	series2.dataFields.valueY = "Hausmüll oder Wertstoffhof";
+	series2.stacked = true;
+	
+	var series3 = chart.series.push(new am4charts.ColumnSeries());
+	series3.columns.template.width = am4core.percent(50);
+	series3.columns.template.tooltipText = "{name}: {valueY.value}";
+	series3.name = "Verkauft";
+	series3.dataFields.categoryX = "category";
+	series3.dataFields.valueY = "Verkauft";
+	series3.stacked = true;
+	
+	var series4 = chart.series.push(new am4charts.ColumnSeries());
+	series4.columns.template.width = am4core.percent(50);
+	series4.columns.template.tooltipText = "{name}: {valueY.value}";
+	series4.name = "Verschenkt";
+	series4.dataFields.categoryX = "category";
+	series4.dataFields.valueY = "Verschenkt";
+	series4.stacked = true;
+	
+	chart.responsive.enabled = true;
+	
+	
+	
+	 </script>
+		
 	</div>
-	<div class="section" id="section3">
+</div>
+
+</div>
+
+
+<!------------------------------------------------------SECTION3-Kauf und Verkauf------------------------------------------------------------------------------------------------------------------------>
+	
+<div class="section" id="section3">
+	<!--SLIDE 1-section3-Kauf/Verkauf--------------------------------->	
+	<div class="slide" id="slide1">
 		<div class="intro">
-			<h1>Enjoy it</h1>
+			<h1>Kauf und Verkauf unbenutzer Produkte</h1>	
+			<h2>Die wichtigsten Vor-und Nachteile</h2>
+			<div id="text1">
+			<div class="container-fluid position-relative" id="introchart">
+				<div class="row">
+					<div class="col-sm-5">
+					<div class="chartlayout"  id="chartdiv4"></div>
+						<p><strong>Vorteile Gebraucht-Kauf</strong></p>
+						<p>Der wichtigste Vorteil liegt beim Sparpotenzial. Dadurch können gebrauchte Produkte gekauft werden, die sich viele Leute neu nicht leisten können.</p>
+					</div>
+
+					<div class="col-sm-7" >
+					 <div class="chartlayout" id="chartdiv5"></div> 
+						 <p><strong>Nachteile Gebraucht-Kauf</strong></p>
+						  <p>Spontan sind die größten Bedenken beim Gebraucht-Kauf: Zustand/Funktionalität/Beschädigung und Hygiene/Sauberkeit.</p>
+					</div>
+					   
+				  </div>
+				</div>
+			</div>
+
+
+		<div id="text2">
+			<div class="container-fluid position-relative" id="introchart">
+				<div class="row">
+					<div class="col-sm-5">
+					<div class="chartlayout"  id="chartdiv6"></div>
+						<p><strong>Vorteile Gebraucht-Kauf</strong></br>Der wichtigste Vorteil liegt beim Sparpotenzial. Dadurch können gebrauchte Produkte gekauft werden, die sich viele Leute neu nicht leisten können.</p>
+					</div>
+
+					<div class="col-sm-7" >
+					 <div class="chartlayout" id="chartdiv7"></div> 
+						 <p><strong>Nachteile Gebraucht-Kauf</strong></p>
+						  <p>Spontan sind die größten Bedenken beim Gebraucht-Kauf: Zustand/Funktionalität/Beschädigung und Hygiene/Sauberkeit.</p>
+					</div>
+					   
+				  </div>
+				</div>
+			</div>
+			<button type="button" class="btn btn-lg" id="Kauf" onclick="toggleParagraph(1, 2)">Gebraucht-Kauf</button>
+			<button type="button" class="btn btn-lg" id="Verkauf" onclick="toggleParagraph(2, 1)">Gebraucht-Verkauf</button>
+		</div>
+
+
+ <!--Javaskriptbuttons-->
+ <script>
+	function toggleParagraph(nbrShow, nbrHide) {
+		document.getElementById("text" + nbrHide).style.display = "none";
+	  document.getElementById("text" + nbrShow).style.display = "block";
+	}
+	</script>
+ 
+	 <!--Vorteile Gebrauchtkauf-->
+	
+	 <script>
+	
+	
+	
+	am4core.useTheme(am4themes_animated);
+	
+	var chart = am4core.create("chartdiv4", am4charts.XYChart);
+	
+	
+	chart.colors.saturation = 0.4;
+	
+	chart.data = [{ 
+		"reason": "Weiß nicht/keine Angabe",
+		"percent": 1
+	}, {
+		"reason": "Sonstiges",
+		"percent": 3
+	}, {
+		"reason": "Einzigartigkeit der Produkte",
+		"percent": 19
+	}, {
+		"reason": "Lieber gebrauchte produkte mit hoher Qualität",
+		"percent": 24
+	}, {
+		"reason": "Kauf nicht mehr verfügbaren Produkte",
+		"percent": 34
+	}, {
+		"reason": "Produkte, die man sich neu nie leisten kann",
+		"percent": 36
+	}, {
+		"reason": "Vermeidung unnötiger Resourcen",
+		"percent": 42
+	}, {
+		"reason": "Sparen beim Kauf",
+		"percent": 56
+	}];
+	
+	
+	var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+	categoryAxis.renderer.grid.template.location = 0;
+	categoryAxis.dataFields.category = "reason";
+	categoryAxis.renderer.minGridDistance = 20;
+	categoryAxis.renderer.grid.template.disabled = true;
+	
+	var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
+	valueAxis.renderer.maxLabelPosition = 0.98;
+	valueAxis.tooltip.disabled = true;
+	valueAxis.renderer.grid.template.disabled = true;
+	
+	var series = chart.series.push(new am4charts.ColumnSeries());
+	series.dataFields.categoryY = "reason";
+	series.dataFields.valueX = "percent";
+	series.tooltipText = "{valueX}";
+	series.sequencedInterpolation = true;
+	series.defaultState.transitionDuration = 1000;
+	series.sequencedInterpolationDelay = 100;
+	series.columns.template.strokeOpacity = 0;
+	
+	series.tooltipText = "{valueX}";
+	
+	chart.cursor = new am4charts.XYCursor();
+	chart.cursor.lineY.disabled = true;
+	chart.cursor.lineX.disabled = true;
+	
+	series.fill = am4color.color("#AFC5C7");
+	chart.responsive.enabeled =true;
+	
+	 </script>
+
+	 <!--Nachteile Gebrauchtkauf-->
+ <script>
+
+	am4core.useTheme(am4themes_animated);
+	
+	var chart = am4core.create("chartdiv5", am4charts.XYChart);
+	
+	
+	chart.colors.saturation = 0.4;
+	
+	chart.data = [{ 
+		"reason": "Weiß nicht/keine Angabe",
+		"percent": 6
+	}, { 
+		"reason": "Sonstiges",
+		"percent": 2
+	},	{
+		"reason": "Gebraucht-Kauf nur für Leute, die sich etwas Neues nicht leisten können",
+		"percent": 4
+	}, {
+		"reason": "Die Kommunikation mit dem Verkäufer ist anstrengend",
+		"percent": 8
+	}, {
+		"reason": "Keine breite Auswahl",
+		"percent": 9
+	}, {
+		"reason": "Suche ist aufwendig",
+		"percent": 14
+	}, {
+		"reason": "Ich fühle mich wohler mit neuen Produkten",
+		"percent": 17
+	},{
+		"reason": "Bedenken über Hygiene",
+		"percent": 21
+	},{
+		"reason": "Keine Angaben über vorherige Nutzung",
+		"percent": 33
+	}, {
+		"reason": "Bedenken, ob Produkte sind wie beschrieben siend",
+		"percent": 34
+	}, {
+		"reason": "Bedenken bei der Vertrauenswürdigkeit des Verkäufers",
+		"percent": 46
+	}, {
+		"reason": "Ungewissheit über die Funktionalität der Produkte",
+		"percent": 52
+	}];
+	
+	
+	var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+	categoryAxis.renderer.grid.template.location = 0;
+	categoryAxis.dataFields.category = "reason";
+	categoryAxis.renderer.minGridDistance = 20;
+	categoryAxis.renderer.grid.template.disabled = true;
+	
+	var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
+	valueAxis.renderer.maxLabelPosition = 0.98;
+	valueAxis.tooltip.disabled = true;
+	valueAxis.renderer.grid.template.disabled = true;
+	
+	var series = chart.series.push(new am4charts.ColumnSeries());
+	series.dataFields.categoryY = "reason";
+	series.dataFields.valueX = "percent";
+	series.tooltipText = "{valueX}";
+	series.sequencedInterpolation = true;
+	series.defaultState.transitionDuration = 1000;
+	series.sequencedInterpolationDelay = 100;
+	series.columns.template.strokeOpacity = 0;
+	
+	
+	
+	
+	series.tooltipText = "{valueX}";
+	
+	chart.cursor = new am4charts.XYCursor();
+	chart.cursor.lineY.disabled = true;
+	chart.cursor.lineX.disabled = true;
+	
+	series.fill = am4color.color("#F8A091");
+	chart.responsive.enabeled =true;
+	
+	
+	
+	
+	
+	
+	
+	
+	  </script>
+	
+
+
+
+</div>
+
+		<!--SLIDE 2-section3-Kauf/Verkauf--------------------------------->	
+	    <div class="slide" id="slide1">
+			<div class="intro">
+				<h1>Kauf und Verkauf unbenutzer Produkte</h1>	
+				<h2>Kauf gebrauchter Produkte</h2>
+				<div class="container-fluid position-relative">
+					<div class="row">
+					<div class="col-md-9">
+						<div class="chartlayout" id="chartdiv8"></div>
+					</div>
+					<div class="col-md-3">
+						<button type="button" class="btn btn-lg" id="Kauf" onclick="toggleParagraph(1, 2);">Altersklasse</button>
+			<button type="button" class="btn btn-lg" id="Verkauf" onclick="toggleParagraph(2, 1);">Geschlecht</button>
+					
+						<p id="caption1">
+							Die jüngere Generation, die <strong>16-29-Jährigen</strong>, kaufen häufiger gebrauchte<strong> Kleidung</strong> (31% vs. 32%) und gebrauchte <strong>Videospiele/Spielzeug </strong> (28% vs. 18%)als <strong>über 30-Jährige.</strong> Diese kaufen dagegen häufiger <strong> CDs/DVDs </strong> (31% vs. 25%)und <strong>Fahrzeuge </strong> (27% vs. 19%) gebraucht.
+						</p>
+						<p id="caption2">
+							<strong>Frauen</strong> kaufen häufiger gebrauchte <strong>Kleidung</strong> (38% w vs. 19% m), <strong>Baby-/Kinderausstattung</strong> (21% w vs. 13% m) sowie <strong>Möbel & Dekoration </strong> (42% w vs. 31% m). 
+							<strong>Männer </strong>hingegen kaufen häufiger <strong> Smartphones & Tablets </strong> (23% vs. 18%), <strong>Elektrogeräte</strong> (24% vs. 17%), <strong>/Spielzeuge</strong> (37% vs. 29%) sowie <strong>Fahrzeuge</strong> (50% vs. 41%).
+						  </p>
+				  </div>
+				  <script>
+					function toggleParagraph(nbrShow, nbrHide) {
+					document.getElementById("caption" + nbrHide).style.display = "none";
+				  document.getElementById("caption" + nbrShow).style.display = "block";
+				}
+				</script>
+			</div>
+			
+			
+			</div>
+			
+
+	
+				
+				<script>
+				
+				am4core.useTheme(am4themes_animated);
+				// Themes end
+				
+				 // Create chart instance
+				var chart = am4core.create("chartdiv8", am4charts.XYChart);
+				
+				// Add data
+				chart.data = [{
+				  "Kategorie": '"Musikinstrumente"',
+				  "Bevorzugt gebraucht gekauft": 3,
+				  "Bereits gebraucht gekauft": 5
+				},{
+				  "Kategorie": "Sportequipment",
+				  "Bevorzugt gebraucht gekauft": 4,
+				  "Bereits gebraucht gekauft": 5
+				},{
+				  "Kategorie": "Fotoapparate & Zubehör",
+				  "Bevorzugt gebraucht gekauft": 3,
+				  "Bereits gebraucht gekauft": 5
+				},{
+				  "Kategorie": "Elektronische Großgeräte",
+				  "Bevorzugt gebraucht gekauft": 5,
+				  "Bereits gebraucht gekauft": 7
+				},{
+				  "Kategorie": "Fahrzeugteile & -zubehör",
+				  "Bevorzugt gebraucht gekauft": 4,
+				  "Bereits gebraucht gekauft": 8
+				}, {
+				  "Kategorie": "Werkzeuge, Gartengeräte & DIY-Zubehör",
+				  "Bevorzugt gebraucht gekauft": 7,
+				  "Bereits gebraucht gekauft": 8
+				}, {
+				  "Kategorie": "Baby-/Kinderausstattung & -kleidung",
+				  "Bevorzugt gebraucht gekauft": 8,
+				  "Bereits gebraucht gekauft": 9
+				}, {
+				  "Kategorie": "Elektrogeräte (inkl. PCs, Radios)",
+				  "Bevorzugt gebraucht gekauft": 8,
+				  "Bereits gebraucht gekauft": 11
+				}, {
+				  "Kategorie": "Smartphones, Tablets",
+				  "Bevorzugt gebraucht gekauft": 9,
+				  "Bereits gebraucht gekauft": 13
+				}, {
+				  "Kategorie": "Sammlerstücke, Antiquitäten",
+				  "Bevorzugt gebraucht gekauft": 16,
+				  "Bereits gebraucht gekauft": 16
+				}, {
+				  "Kategorie": "Videospiele, Spielzeuge",
+				  "Bevorzugt gebraucht gekauft": 14,
+				  "Bereits gebraucht gekauft": 20
+				}, {
+				  "Kategorie": "Dekoration, Möbel",
+				  "Bevorzugt gebraucht gekauft": 14,
+				  "Bereits gebraucht gekauft": 20
+				}, {
+				  "Kategorie": "Kleidung, Schuhe, Accessoires",
+				  "Bevorzugt gebraucht gekauft": 19,
+				  "Bereits gebraucht gekauft": 24
+				}, {
+				  "Kategorie": "Fahrzeuge",
+				  "Bevorzugt gebraucht gekauft": 15,
+				  "Bereits gebraucht gekauft": 25
+				}, {
+				  "Kategorie": "CDs, DVDs, BlueRays",
+				  "Bevorzugt gebraucht gekauft": 23,
+				  "Bereits gebraucht gekauft": 30
+				}, {
+				  "Kategorie": "Bücher",
+				  "Bevorzugt gebraucht gekauft": 55,
+				  "Bereits gebraucht gekauft": 54
+				}];
+				
+				// Create axes
+				var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+				categoryAxis.dataFields.category = "Kategorie";
+				categoryAxis.numberFormatter.numberFormat = "#";
+				categoryAxis.renderer.grid.template.location = 0;
+				categoryAxis.renderer.minGridDistance = 20;
+				categoryAxis.renderer.cellStartLocation = 0.1;
+				categoryAxis.renderer.cellEndLocation = 0.9;
+				categoryAxis.renderer.grid.template.disabled = true;
+				
+				var  valueAxis = chart.xAxes.push(new am4charts.ValueAxis()); 
+				valueAxis.renderer.grid.template.disabled = true;
+				
+				
+				// Create series
+				function createSeries(field, name) {
+				  var series = chart.series.push(new am4charts.ColumnSeries());
+				  series.dataFields.valueX = field;
+				  series.dataFields.categoryY = "Kategorie";
+				  series.name = name;
+				  series.columns.template.tooltipText = "{name}: [bold]{valueX}[/]";
+				  series.columns.template.height = am4core.percent(100);
+				  series.sequencedInterpolation = true;
+				
+				  var valueLabel = series.bullets.push(new am4charts.LabelBullet());
+				  valueLabel.label.horizontalCenter = "left";
+				  valueLabel.label.dx = 10;
+				  valueLabel.label.hideOversized = false;
+				  valueLabel.label.truncate = false;
+				}
+				
+				chart.colors.list = [
+				  am4core.color("#F7CDC6"),
+				  am4core.color("#FF7159"),
+				];
+				
+				// Legende
+				chart.legend = new am4charts.Legend();
+				
+				createSeries("Bevorzugt gebraucht gekauft", "Bevorzugt gebraucht gekauft");
+				createSeries("Bereits gebraucht gekauft", "Bereits gebraucht gekauft");
+				
+				</script>
+		</div>
+
+		<!--SLIDE 3-section3-Kauf/Verkauf--------------------------------->	
+	    <div class="slide" id="slide1">
+			<div class="intro">
+				<h1>Kauf und Verkauf unbenutzer Produkte</h1>	
+				<h2>Verkaufte Produkte in den letzen 12 Monaten</h2>
+			</div>
+		</div>
+
+
+		<!--SLIDE 4-section3-Kauf/Verkauf--------------------------------->	
+	    <div class="slide" id="slide1">
+			<div class="intro">
+				<h1>Kauf und Verkauf unbenutzer Produkte</h1>	
+				<h2>Verkaufte Produkte in den letzen 12 Monaten</h2>
+			</div>
+		</div>
+
+		<!--SLIDE 5-section3-Kauf/Verkauf--------------------------------->	
+	    <div class="slide" id="slide1">
+			<div class="intro">
+				<h1>Kauf und Verkauf unbenutzer Produkte</h1>	
+				<h2>Häufigkeit der Gebraucht-Käufe</h2>
+			</div>
+		</div>
+
+		<!--SLIDE6 -section3-Kauf/Verkauf--------------------------------->	
+	    <div class="slide" id="slide1">
+			<div class="intro">
+				<h1>Kauf und Verkauf unbenutzer Produkte</h1>	
+				<h2>Beliebte Second-Hand-Einkaufsstätten</h2>
+			</div>
 		</div>
 	</div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!------------------------------------------------------SECTION4-Impressum------------------------------------------------------------------------------------------------------------------------>
 	<div class="section" id="section4">
 		<div class="intro">
 			<h1>Enjoy it</h1>
@@ -212,6 +858,8 @@ chart.responsive.enabled = true;
 	</div>
 </div>
 
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="dist/fullpage.js"></script>
 <script type="text/javascript" src="examples.js"></script>
 

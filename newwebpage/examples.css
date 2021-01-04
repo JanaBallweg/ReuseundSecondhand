@@ -1,12 +1,14 @@
-@CHARSET "ISO-8859-1";
+
 /* Reset CSS
  * --------------------------------------- */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
 form,fieldset,input,textarea,p,blockquote,th,td {
     padding: 0;
 	margin-top: 0;
+	
 
 }
+
 
 
 a{
@@ -135,6 +137,7 @@ p{
 		font-family:'Roboto';
 		font-weight:500;
 		color: rgb(69, 69, 69);
+		margin-top:1em;
 	
 	}
 
@@ -145,21 +148,6 @@ p{
 	
 	
 
-	/* Centered texts in each section
-	* --------------------------------------- */
-	.section{
-
-	}
-
-	/* Overwriting styles for control arrows for slides
-	* --------------------------------------- */
-	.controlArrow.prev {
-		left: 70px;
-	}
-	.controlArrow.next{
-		right: 70px;
-	}
-
 
 	/* Bottom menu
 	* --------------------------------------- */
@@ -167,24 +155,48 @@ p{
 		color: #fff;
 	}
 
-	
+	.chartlayout{
 
-	#chartdiv1 {
-        width: 100%;
-        max-width:auto;
-      max-height: 800px;
-      height: 80vh;
+		width: 100%;
+		max-width:auto;
+		height: 80vh;
+      	max-height: 80%;
+    	font-size: 15px;
+        background-color: #ffffff;
+		overflow: auto;
+		margin-top:0.5em;
+		font-family:'Open Sans';
+
+
+	}
+
+	#chartdiv3 {
+	   margin-left:10em;
+        
+	}
+
+	#chartdiv4, #chartdiv5 {
+		width: 100%;
+        max-width:800px;
+      max-height: 400px;
+      height: 70vh;
         font-size: 15px;
         background-color: #ffffff;
-        overflow: hidden;
-        
-    }
+		overflow: hidden;
+	
+      
+		
+		 
+	 }
+	
+
 	
 	.intro{
-margin-top:3em;
-text-align:left;
-margin-left:5.5em;
-margin-right:12em;
+		margin-top:3em;
+		text-align:left;
+		margin-left:5.5em;
+		margin-right:12em;
+
 	}
 
 	.intro p{
@@ -192,8 +204,24 @@ margin-right:12em;
 		font-size: 1.1em;
 		margin-top:10em;
 		text-align:left;
-		vertical-align: middle;}
+		vertical-align: center;
+		font-family:'Open Sans';
 
+	}
+
+	#introchart{
+
+		margin-top:3em;
+		text-align:left;
+		margin-left:2em;
+		margin-right:4em;
+	}
+
+	.textbottom{
+		margin-top:30em;
+	}
+
+		
 
 	.fp-controlArrow.fp-prev{
 		left:50px;
@@ -220,5 +248,38 @@ margin-right:12em;
     background:#DB7261;
 }
 
+
+#text2 {
+	display: none;
+  }
+
+  #caption2 {
+	display: none;
+  }
+  .btn.btn-lg:focus{
+	background-color:#F8A091;
+  
+	
+
+
+  }
+
+  .btn.btn-lg{
+
+	background-color:#ffffff;
+	border-color:#DB7261;
+	font:#000000;
+	font-family: 'Open Sans'; 
+	margin-bottom:3%;
+	margin-right:10%;
+
+	   }
+	   
+.btn.btn-lg:hover{
+	 background-color:#F8A091;;
+	border-color:#DB7261;
+	font-family: 'Open Sans'; 
+	
+}
 
 	
