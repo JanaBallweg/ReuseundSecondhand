@@ -9,6 +9,11 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 
 }
 
+#section0{ background-image: url("../Images/dreieck_medium.PNG"); background-repeat:no-repeat; background-size: cover;}
+#section1 { background:#ffffff;}
+#section2 { background:#ffffff;}
+#section3 { background:#ffffff;}
+#section4 { background-image: url("../Images/dreieck_medium_bam.png"); background-repeat:no-repeat; background-size: cover;}
 
 
 a{
@@ -316,5 +321,38 @@ p{
 	font-family: 'Open Sans'; 
 	
 }
+.studie-img{
+	margin-left:15%;  
+   margin-top:5em;    }
+
+
+   .startseite-img{
+    position: absolute;
+    bottom: 0px;
+    left: 350px;
+    right: 10px;
+    margin: auto;
+    justify-content: center;
+}
+.dhbw {
+    position:absolute;
+   
+    bottom:10%;
+    color:rgb(4, 98, 92);
+	font-family: 'Open Sans'; font: weight 300; 
+}
+
+.logo-img{
+    position:absolute;
+    left:8%;
+    bottom:4%;
+ }
+
+ a:link{
+	 color:rgb(4, 98, 92);
+ }
+ a:visited {  color:rgb(4, 98, 92);
+}
+
 
 	
