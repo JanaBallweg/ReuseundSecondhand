@@ -112,15 +112,21 @@
 						<div class="chartlayout" id="chartdiv1"></div>
 					</div>
 					<div class="col-md-3">
+				
 						<p>
-							Mit 62 % sind <strong>CDs, DVDs </strong>und <strong>Bücher</strong> die häufigsten Produkte, die seit mindestens 12 Monaten nicht mehr benutzt wurden.
-							 Weitere 10 % gaben an keine Produkte nicht zu nutzen.
+							Mit <strong>62 %</strong> sind <strong>CDs, DVDs </strong>und <strong>Bücher</strong> die häufigsten Produkte, die seit mindestens 12 Monaten nicht mehr benutzt wurden.
+							 Weitere <strong>10 % </strong>gaben an keine Produkte nicht zu nutzen.
 						</p>
 					</div>
 				  </div>
 			</div>
 
 		<!--shirinsdiagramm 1-->
+
+		<script>
+
+			
+		</script>
 		<script>
 
 
@@ -229,8 +235,8 @@ chart.responsive.enabled = true;
 						</div>
 						<div class="col-md-3">
 							<p>
-							Knapp  <strong>die Hälfte der Befragten (47%) </strong>gibt an, ungenutzte Produkte mit einem Wert von <strong> unter 500 € </strong>zu besitzen. Darüber hinaus liegt bei <strong>einem Drittel</strong> der Wert ungenutzter Produkte bei <strong>über 500 €</strong>.
-                			<strong> Im Westen </strong> haben die ungenutzten Produkte vermehrt einen Wert von <strong>250-499 €</strong>. <strong>Im Osten </strong> hingegen liegt der Wert bei <strong>100-259 €</strong>.
+							Knapp  <strong>die Hälfte der Befragten (47%) </strong>gibt an, ungenutzte Produkte mit einem Wert von <strong> unter 500 € </strong>zu besitzen. <br>Darüber hinaus liegt bei <strong>einem Drittel</strong> der Wert ungenutzter Produkte bei <strong>über 500 €</strong>.
+                			</br></br><strong> Im Westen </strong> haben die ungenutzten Produkte vermehrt einen Wert </br>von <strong>250-499 €</strong>. <strong>Im Osten </strong> hingegen liegt der Wert bei <strong>100-259 €</strong>.
                 			<strong>Der Deutsche </strong>besitzt im <strong>Durchschnitt </strong>ungenutzte Produkte im Wert von <strong>1.289 €</strong>.
 							</p>
 						</div>
@@ -330,22 +336,63 @@ chart.responsive.enabeled =true;
 	<!--SLIDE 3-section2-Besitz-------------------------------->	
 <div class="slide" id="slide2">
 	<div class="intro">
-		<h1>Besitz gebrauchter Produkte</h1>	
+		<h1>Besitz gebrauchter Produkte</h1>
+		<div class="row">
+			<div class="col-md-8">
 		<h2>Entsorgung unbenutzer Produkte</h2>
+	</div>
+
+	<div class="col-md-4">
+		<button type="button" class="btn btn-lg" id="verschenken" onclick="toggleDiagramm(1, 2)">Verschenkt</button>
+			<button type="button" class="btn btn-lg" id="verkaufen" onclick="toggleDiagramm(2, 1)">Verkauft</button>
+	</div>
+	</div>	
+	
 			<div class="container-fluid position-relative">
 				<div class="row">
 				<div class="col-md-7">
+					
+
 					<div class="chartlayout" id="chartdiv3"></div>
+					<div class="verschenkebuttons">
+					
 				</div>
+				</div>
+			
+
 				<div class="col-md-5">
+				
+					<div id="diagramm1">
+						<div class="chartlayout" id="chartdiv3_1"></div>
+				</div>
+
+				<div id="diagramm2">
+					<div class="chartlayout" id="chartdiv3_2"></div>
+				</div>
+
+			
 					<div class="textbottom">
 					<p>
 						Mit <strong>62 % </strong>sind <strong>CDs, DVDs </strong>und <strong>Bücher</strong> die häufigsten Produkte, die seit mindestens 12 Monaten nicht mehr benutzt wurden.
 						Weitere <strong> 10 %</strong> gaben an <strong>keine</strong> Produkte <strong>nicht</strong> zu nutzen. </p> 
 					</div>
 				</div>
+
+				
 			  </div>
 		</div>
+
+		<script>
+			function toggleDiagramm(nbrShow, nbrHide) {
+			document.getElementById("diagramm" + nbrHide).style.display = "none";
+		  document.getElementById("diagramm" + nbrShow).style.display = "block";
+
+		  
+		
+		
+		}
+		</script>
+
 	<!--shirinsdiagramm 3-->
 	<script>
 		am4core.useTheme(am4themes_animated);
@@ -430,6 +477,108 @@ chart.responsive.enabeled =true;
 	
 	 </script>
 		
+
+		<script>//am4core.useTheme(am4themes_animated);
+
+			var chart = am4core.create("chartdiv3_1", am4charts.XYChart);
+			
+			
+			chart.colors.saturation = 0.4;
+			
+			chart.data = [{ 
+				"reason": "Straße",
+				"percent": 15
+			}, { 
+				"reason": "Wohltätige Einrichtung",
+				"percent": 21
+			},	{
+				"reason": "Online-Kleinanzeigen",
+				"percent": 34
+			}, {
+				"reason": "Freunde oder Familie",
+				"percent": 37
+			}];
+			
+			
+			var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+			categoryAxis.renderer.grid.template.location = 0;
+			categoryAxis.dataFields.category = "reason";
+			categoryAxis.renderer.grid.template.disabled = true;
+			
+			var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
+			valueAxis.renderer.maxLabelPosition = 0.98;
+			  valueAxis.tooltip.disabled = true;
+			valueAxis.renderer.grid.template.disabled = true;
+			
+			var series = chart.series.push(new am4charts.ColumnSeries());
+			series.dataFields.categoryY = "reason";
+			series.dataFields.valueX = "percent";
+			series.tooltipText = "{valueX}";
+			series.sequencedInterpolation = true;
+			series.defaultState.transitionDuration = 1000;
+			series.sequencedInterpolationDelay = 100;
+			series.columns.template.strokeOpacity = 0;
+			series.fill = am4core.color("#9DC4E6");
+			
+			
+			series.tooltipText = "{valueX}";
+			
+			chart.cursor = new am4charts.XYCursor();
+			chart.cursor.lineY.disabled = true;
+			chart.cursor.lineX.disabled = true;
+			</script>
+
+			<script>//am4core.useTheme(am4themes_animated);
+
+				var chart = am4core.create("chartdiv3_2", am4charts.XYChart);
+				
+				
+				chart.colors.saturation = 0.4;
+				
+				chart.data = [{ 
+					"reason": "Zeitungsannaunce",
+					"percent": 1
+				}, { 
+					"reason": "Flohmarkt",
+					"percent": 3
+				},	{
+					"reason": "Kaufdienst",
+					"percent": 8
+				}, {
+					"reason": "Marktplatz",
+					"percent": 21
+				}, {
+					"reason": "Kleinanzeigen",
+					"percent": 30
+				}];
+				
+				
+				var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+				categoryAxis.renderer.grid.template.location = 0;
+				categoryAxis.dataFields.category = "reason";
+				categoryAxis.renderer.grid.template.disabled = true;
+				
+				var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
+				valueAxis.renderer.maxLabelPosition = 0.98;
+				  valueAxis.tooltip.disabled = true;
+				valueAxis.renderer.grid.template.disabled = true;
+				
+				var series = chart.series.push(new am4charts.ColumnSeries());
+				series.dataFields.categoryY = "reason";
+				series.dataFields.valueX = "percent";
+				series.tooltipText = "{valueX}";
+				series.sequencedInterpolation = true;
+				series.defaultState.transitionDuration = 1000;
+				series.sequencedInterpolationDelay = 100;
+				series.columns.template.strokeOpacity = 0;
+				series.fill = am4core.color("#699195");
+				
+				
+				series.tooltipText = "{valueX}";
+				
+				chart.cursor = new am4charts.XYCursor();
+				chart.cursor.lineY.disabled = true;
+				chart.cursor.lineX.disabled = true;</script>
 	</div>
 </div>
 
@@ -448,8 +597,8 @@ chart.responsive.enabeled =true;
 					<h2>Die wichtigsten Vor-und Nachteile</h2>
 				</div>
 				<div class="col-sm-4">
-					<button type="button" class="btn btn-lg" onclick="toggleParagraph(1, 2)">Gebraucht-Kauf</button>
-					<button type="button" class="btn btn-lg" onclick="toggleParagraph(2, 1)">Gebraucht-Verkauf</button>
+					<button type="button" class="btn btn-lg" id="buttonkauf" onclick="toggleParagraph(1, 2)">Gebraucht-Kauf</button>
+					<button type="button" class="btn btn-lg" id="buttonverkauf" onclick="toggleParagraph(2, 1)">Gebraucht-Verkauf</button>
 	
 				</div>
 			</div>
@@ -459,13 +608,13 @@ chart.responsive.enabeled =true;
 					<div class="col-sm-6">
 					<div class="chartlayout"  id="chartdiv4"></div>
 						<p><strong>Vorteile Gebraucht-Kauf</strong></p>
-						<p>Der wichtigste Vorteil liegt beim Sparpotenzial. Dadurch können gebrauchte Produkte gekauft werden, die sich viele Leute neu nicht leisten können.</p>
+						<p>Der wichtigste Vorteil liegt beim <strong>Sparpotenzial</strong>. Dadurch können gebrauchte Produkte gekauft werden, die sich viele Leute neu nicht leisten können.</p>
 					</div>
 
 					<div class="col-sm-6" >
 					 <div class="chartlayout" id="chartdiv5"></div> 
 						 <p><strong>Nachteile Gebraucht-Kauf</strong></p>
-						  <p>Spontan sind die größten Bedenken beim Gebraucht-Kauf: Zustand/Funktionalität/Beschädigung und Hygiene/Sauberkeit.</p>
+						  <p>Spontan sind die größten Bedenken beim Gebraucht-Kauf <strong>Zustand, Funktionalität, Beschädigung</strong> und <strong>Sauberkeit</strong>.</p>
 					</div>
 					   
 				  </div>
@@ -473,18 +622,18 @@ chart.responsive.enabeled =true;
 			</div>
 
 		<div id="vorteil2">
-			<div class="container-fluid position-relative" id="introchart">
+			<div class="container-fluid position-relative" id="introchart2">
 				<div class="row">
 					<div class="col-sm-6">
 					<div class="chartlayout"  id="chartdiv6"></div>
 						<p><strong>Vorteile Gebraucht-Verkauf</strong></p>
-						<p>Der wichtigste Vorteil liegt beim Sparpotenzial. Dadurch können gebrauchte Produkte gekauft werden, die sich viele Leute neu nicht leisten können.</p>
+						<p>Das Hauptargument für den Verkauf von gebrauchten Produkten ist über alle Altersgruppen hinweg, dass das Produkt <strong>für andere noch einen Wert</strong> haben könnte. Es bietet eine <strong>zusätzliche Einnahmequelle</strong>, sowie die <strong>Verlängerung des Produktzyklus</strong>.</p>
 					</div>
 
 					<div class="col-sm-6" >
 					 <div class="chartlayout" id="chartdiv7"></div> 
 						 <p><strong>Nachteile Gebraucht-Verkauf</strong></p>
-						  <p>Spontan sind die größten Bedenken beim Gebraucht-Kauf: Zustand/Funktionalität/Beschädigung und Hygiene/Sauberkeit.</p>
+						  <p>Der größte Nachteil des Verkaufs ist der <strong></strong>große Zeitaufwand</strong>. Eine weitere Hürde ist die <strong>Unkenntnis über den Wert</strong> der Produkte und auch die<strong> Angst vor Betrug</strong>.</p>
 					</div>
 					   
 				  </div>
@@ -719,6 +868,7 @@ chart.responsive.enabeled =true;
 		series.sequencedInterpolationDelay = 100;
 		series.columns.template.strokeOpacity = 0;
 		
+		series.fill = am4core.color("#689195");
 		
 		series.tooltipText = "{valueX}";
 		
@@ -727,7 +877,7 @@ chart.responsive.enabeled =true;
 		chart.cursor.lineX.disabled = true;
 		
 		
-		series.fill = am4color.color("#F8A091");
+	
 		
 		
 		
@@ -792,6 +942,7 @@ chart.responsive.enabeled =true;
 		series.sequencedInterpolationDelay = 100;
 		series.columns.template.strokeOpacity = 0;
 		
+		series.fill = am4core.color("#689195");
 		
 		series.tooltipText = "{valueX}";
 		
@@ -799,7 +950,7 @@ chart.responsive.enabeled =true;
 		chart.cursor.lineY.disabled = true;
 		chart.cursor.lineX.disabled = true;
 		
-		series.fill = am4color.color("#F8A091");
+		
 		
 		</script>
 
@@ -822,7 +973,8 @@ chart.responsive.enabeled =true;
 			<button type="button" class="btn btn-lg" id="Verkauf" onclick="toggleParagraph2(2, 1);">Geschlecht</button>
 					
 						<p id="caption1">
-							Die jüngere Generation, die <strong>16-29-Jährigen</strong>, kaufen häufiger gebrauchte<strong> Kleidung</strong> (31% vs. 32%) und gebrauchte <strong>Videospiele/Spielzeug </strong> (28% vs. 18%)als <strong>über 30-Jährige.</strong> Diese kaufen dagegen häufiger <strong> CDs/DVDs </strong> (31% vs. 25%)und <strong>Fahrzeuge </strong> (27% vs. 19%) gebraucht.
+							Die jüngere Generation, die <strong>16-29-Jährigen</strong>, kaufen häufiger gebrauchte<strong> Kleidung</strong> (31% vs. 32%) 
+							und gebrauchte <strong>Videospiele/Spielzeug </strong> (28% vs. 18%) als <strong>über 30-Jährige.</strong> Diese kaufen dagegen häufiger <strong> CDs/DVDs </strong> (31% vs. 25%)und <strong>Fahrzeuge </strong> (27% vs. 19%) gebraucht.
 						</p>
 						<p id="caption2">
 							<strong>Frauen</strong> kaufen häufiger gebrauchte <strong>Kleidung</strong> (38% w vs. 19% m), <strong>Baby-/Kinderausstattung</strong> (21% w vs. 13% m) sowie <strong>Möbel & Dekoration </strong> (42% w vs. 31% m). 
@@ -950,8 +1102,8 @@ chart.responsive.enabeled =true;
 				}
 				
 				chart.colors.list = [
-				  am4core.color("#F7CDC6"),
-				  am4core.color("#FF7159"),
+				  am4core.color("#9dc3e7"),
+				  am4core.color("#6c87a0"),
 				];
 				
 				// Legende
@@ -976,8 +1128,8 @@ chart.responsive.enabeled =true;
 				</div>
 				<div class="col-md-3">
 					<p>
-						Bezüglich der verkauften Produktkategorien der letzten 12 Monate handelt es sich bei 40 % der verkauften Waren um Bücher, bei 36 % um Kleidung,
-            Schuhe und Accessoires und bei 30 % um CDs, DVDs oder Blu-Rays. Diese decken sich teilweise mit den Angaben zum Kauf gebrauchter Produkte. </p> 
+						Bezüglich der verkauften Produktkategorien der letzten 12 Monate handelt es sich bei </br><strong>40 % </strong>der verkauften Waren um<strong> Bücher</strong>, bei <strong>36 % </strong>um <strong>Kleidung,
+            Schuhe und Accessoires</strong> und bei <strong>30 %</strong> um <strong>CDs, DVDs oder Blu-Rays</strong>. Diese decken sich teilweise mit den Angaben zum Kauf gebrauchter Produkte. </p> 
 					</p>
 				</div>
 			  </div>
@@ -1067,9 +1219,7 @@ series.sequencedInterpolation = true;
 series.defaultState.transitionDuration = 1000;
 series.sequencedInterpolationDelay = 100;
 series.columns.template.strokeOpacity = 0;
-
-
-
+series.fill = am4core.color("#689195");
 
 series.tooltipText = "{valueX}";
 
@@ -1077,7 +1227,6 @@ chart.cursor = new am4charts.XYCursor();
 chart.cursor.lineY.disabled = true;
 chart.cursor.lineX.disabled = true;
 
-series.fill = am4color.color("#F8A091");
 
 </script>
 	</div>
@@ -1106,8 +1255,10 @@ series.fill = am4color.color("#F8A091");
 						</div>
 					  </div>
 					  <div class="textwithoutmargin">
-					  <p>Bezüglich der verkauften Produktkategorien der letzten 12 Monate handelt es sich bei 40 % der verkauften Waren um Bücher, bei 36 % um Kleidung,
-						Schuhe und Accessoires und bei 30 % um CDs, DVDs oder Blu-Rays. Diese decken sich teilweise mit den Angaben zum Kauf gebrauchter Produkte. </p> 
+					  <p>Weniger als die <strong> Hälfte der Befragten (47%)</strong> hat in den letzten 12 Monaten Gebraucht-Käufe vorgenommen, unter den<strong> 19- bis 29-Jährigen</strong> 
+						 waren es sogar <strong>59 %</strong>. 
+					 <strong> 49 % der über 30-jährigen Personen</strong> geben an, in den letzten 12 Monaten gebrauchte Waren gekauft zu haben, bei den jüngeren waren es dagegen lediglich <strong>36 %</strong>.
+					   Darüber hinaus geben <strong>22 %</strong> der 1.023 Teilnehmenden an mindestens einmal etwas Gebrauchtes gekauft zu haben und <strong>29 % </strong>kauften in den letzten 12 Monaten wiederholt Produkte, welche nicht mehr neuwertig waren. </p> 
 								</p>
 							</div>
 				</div>
@@ -1168,9 +1319,9 @@ series.hiddenState.properties.startAngle = -90;
 series.legendSettings.valueText = " ";
 
 series.colors.list = [
-    am4core.color("#F7CDC6"),
-    am4core.color("#F8A091"),
-    am4core.color("#FF7159"),
+    am4core.color("#9dc3e7"),
+    am4core.color("#84a6c5"),
+    am4core.color("#6c87a0"),
     am4core.color("#A6A6A6"),
   ];
   
@@ -1214,12 +1365,12 @@ chart.legend = new am4charts.Legend();
 					
 						<div class="row">
 						   <div class="col-sm-6">          
-								<p>Die Mehrheit der Personen (49%) kauft selten gebrauchte Produkte. Ca. 29% kaufen alle 2-3 Monate.</p>
+								<p>Die Mehrheit der Personen (49%) <strong>kauft selten gebrauchte Produkte</strong>. Ca. 29% kaufen alle 2-3 Monate.</p>
 						   </div>
 					
 							  
 						   <div class="col-sm-6" >
-							  <p>Die Mehrheit der Personen (30%) verkauft mehr als viermal im Jahr gebrauchte Produkte.</p>
+							  <p>Die Mehrheit der Personen (30%) verkauft <strong>mehr als viermal im Jahr</strong> gebrauchte Produkte.</p>
 						  </div>
 					
 						</div> 
@@ -1376,15 +1527,16 @@ chart.legend = new am4charts.Legend();
 						<div class="col-sm-7">
 						
 						  <div class="chartlayout" id="chartdiv13"></div>
-						  <p>Verkauft wurden ungenutzte Produkte von 46 % der Personen über eine Online-Kleinanzeigenseite (30 %), 
-							über einen Online-Marktplatz (21 %), über einen Ankaufsdienst (8 %), auf einem Flohmarkt (3 %) oder über eine Zeitungsannonce (1 %)</p>
+						  <p>Verkauft wurden ungenutzte Produkte von 46 % der Personen über eine <strong>Online-Kleinanzeigenseite (30 %)</strong>, 
+							über einen <strong>Online-Marktplatz (21 %)</strong>, über einen <strong>Ankaufsdienst (8 %)</strong>, auf einem <strong>Flohmarkt (3 %)</strong>
+							 oder über eine <strong>Zeitungsannonce (1 %)</strong>.</p>
 						 
 						</div>
 						<div class="col-sm-5" >
 							
 						 
 						  <div class="chartlayout"  id="chartdiv14"></div>
-						  <p>Die Mehrheit (78%) der Befragten bevorzugt zum Verkauf gebrauchter Produkte Online-Kanäle.</p>
+						  <p>Die Mehrheit (78%) der Befragten bevorzugt zum Verkauf gebrauchter Produkte <strong>Online-Kanäle</strong>.</p>
 						</div>
 					</div>
 			</div>
@@ -1595,6 +1747,8 @@ chart.legend = new am4charts.Legend();
 	</div>
 </div>
 
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
 <script
 src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="dist/fullpage.js"></script>
