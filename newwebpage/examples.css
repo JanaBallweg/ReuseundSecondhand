@@ -9,9 +9,9 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 
 }
 
-#section0{ background-image: url("../Images/dreieck_medium.PNG"); background-repeat:no-repeat; background-size: cover;}
-#section1 { background:#ffffff;}
-#section2 { background:#ffffff;}
+#section0{ background-image: url("../Images/reuse4.png"); background-repeat:no-repeat;}
+#section1 {  background:#ffffff;}
+#section2 {  background:#ffffff;}
 #section3 { background:#ffffff;}
 #section4 { background-image: url("../Images/dreieck_medium_bam.png"); background-repeat:no-repeat; background-size: cover;}
 
@@ -122,27 +122,40 @@ p{
 
 
 
+.layoutstart{
+	margin-left: 5em;
+	margin-top:8em;
 
+}
  
 
 /* Style for our header texts
 	* --------------------------------------- */
 	h1{
-		font-size: 3em;
+		font-size: 3.5em;
 		font-family:'Roboto';
 		font-weight: 700;
-		color:#689195;
+		color:#063567;
+		
 		
 	
 		
 	}
 
 	#title{
-font-size:4em;
-line-height:1.5em;
+		font-size: 5em;
 
+line-height:1em;}
 
-	}
+#subtitle{
+	font-size: 1.5em;
+		font-family:'Roboto';
+		font-weight: 500;
+		color:#FFC100;
+		margin-top:1.5em;
+		
+}
+	
 
 	h2{
 		font-size: 1.5em;
@@ -301,13 +314,13 @@ line-height:1.5em;
 	
 
 		#fp-nav ul li .fp-tooltip{
-    color:#DB7261;
+    color:#063567;
 }
 
 
 #fp-nav ul li a span,.fp-slidesNav ul li a span:hover{
 
-    background:#DB7261;
+    background:#063567;
 }
 
 
@@ -388,14 +401,12 @@ border-color:#84a6c5;
 .dhbw {
     position:absolute;
    
-    bottom:10%;
-    color:rgb(4, 98, 92);
+    color:#063567;
 	font-family: 'Open Sans'; font: weight 300; 
 }
 
 .logo-img{
     position:absolute;
-	left:6%;
     bottom:4%;
  }
 
