@@ -9,8 +9,8 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 
 }
 
-#section0{ background-image: url("../Images/Startseitenew.svg"); background-repeat:no-repeat; background-size: contain; }
-#section1 {   background-image: url("../Images/Studie1.svg"); background-repeat:no-repeat;background-size: contain}
+#section0{ background-image: url("../Images/Startseitenew4.svg"); background-repeat:no-repeat; background-position:right}
+#section1 {   background-image: url("../Images/Studie1.svg"); background-repeat:no-repeat;background-size: 100% auto;}
 #section2 {  background:#ffffff;}
 #section3 { background:#ffffff;}
 #section4 { background-image: url("../Images/dreieck_medium_bam.png"); background-repeat:no-repeat; background-size: cover;}
