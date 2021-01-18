@@ -9,8 +9,8 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 
 }
 
-#section0{ background-image: url("../Images/reuse4.png"); background-repeat:no-repeat;}
-#section1 {  background:#ffffff;}
+#section0{ background-image: url("../Images/reuse8.png"); background-repeat:no-repeat;}
+#section1 {   background-image: url("../Images/Studie1.svg"); background-repeat:no-repeat;background-size: cover;}
 #section2 {  background:#ffffff;}
 #section3 { background:#ffffff;}
 #section4 { background-image: url("../Images/dreieck_medium_bam.png"); background-repeat:no-repeat; background-size: cover;}
@@ -74,6 +74,12 @@ p{
 	width: 100%;
 	
 }
+
+.studiep{
+margin-top:7em;
+
+
+}
 .section{
 	text-align:left;
 }
@@ -135,7 +141,7 @@ p{
 		font-size: 3.5em;
 		font-family:'Roboto';
 		font-weight: 700;
-		color:#063567;
+		color:#083f77;
 		
 		
 	
@@ -149,7 +155,7 @@ line-height:1em;}
 
 #subtitle{
 	font-size: 1.5em;
-		font-family:'Roboto';
+		font-family:'Montserrat'; font-weight:bold;
 		font-weight: 500;
 		color:#FFC100;
 		margin-top:1.5em;
@@ -159,7 +165,7 @@ line-height:1em;}
 
 	h2{
 		font-size: 1.5em;
-		font-family:'Roboto';
+		font-family:'Montserrat'; font-weight: bold;
 		font-weight:500;
 		color: rgb(69, 69, 69);
 		margin-top:1em;
@@ -190,7 +196,7 @@ line-height:1em;}
         background-color: #ffffff;
 		overflow: auto;
 		margin-top:0.5em;
-		font-family:'Open Sans';
+		font-family:'Montserrat';font-weight: 300;
 
 
 	}
@@ -263,8 +269,11 @@ line-height:1em;}
 		max-height: 80%;
 		margin-top:3em;
 		text-align:left;
-		margin-left:5.5em;
-		margin-right:12em;
+	
+		margin-right:7em;
+		margin-left: 10em;
+	
+
 
 	}
 
@@ -273,7 +282,7 @@ line-height:1em;}
 		font-size: 1.1em;
 		margin-top:1em;
 		text-align:left;
-		font-family:'Open Sans';
+		font-family:'Montserrat'; font-weight: 300;
 
 	}
 
@@ -299,28 +308,30 @@ line-height:1em;}
 		
 
 	.fp-controlArrow.fp-prev{
+		top:10.5em;
 		left:50px;
-		border-color: transparent #689195  transparent transparent;
+		border-color: transparent #ffc100  transparent transparent;
 	  
 		border-width: 20px 20px 20px 0;
 		
 	}
 	
 	.fp-controlArrow.fp-next{
+		top:10.5em;
 		right:70px;
-		border-color: transparent transparent transparent #689195;
+		border-color: transparent transparent transparent #ffc100;
 		border-width: 20px 0 20px 20px;
 		}
 	
 
 		#fp-nav ul li .fp-tooltip{
-    color:#063567;
+    color:#083f77;
 }
 
 
 #fp-nav ul li a span,.fp-slidesNav ul li a span:hover{
 
-    background:#063567;
+    background:#083f77;
 }
 
 
@@ -420,6 +431,13 @@ border-color:#84a6c5;
 .verschenkebuttons{
 float:right;
 top:15em;
+
+}
+
+#welcomebutton{
+	background-color:#ffc100;
+	margin-top:8em;
+	font-family: 'Montserrat';font-weight: 600;
 
 }
 
