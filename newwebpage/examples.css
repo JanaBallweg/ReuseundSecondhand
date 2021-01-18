@@ -9,7 +9,7 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 
 }
 
-#section0{ background-image: url("../Images/reuse8.png"); background-repeat:no-repeat;}
+#section0{ background-image: url("../Images/reuse8.png"); background-repeat:no-repeat;background-size: cover;}
 #section1 {   background-image: url("../Images/Studie1.svg"); background-repeat:no-repeat;background-size: cover;}
 #section2 {  background:#ffffff;}
 #section3 { background:#ffffff;}
