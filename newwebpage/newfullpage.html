@@ -222,7 +222,7 @@ categoryAxis.renderer.grid.template.disabled = true;
 var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
 valueAxis.renderer.maxLabelPosition = 0.98;
   valueAxis.tooltip.disabled = true;
-valueAxis.renderer.grid.template.disabled = true;
+valueAxis.renderer.grid.template.disabled = false;
 
 var series = chart.series.push(new am4charts.ColumnSeries());
 series.dataFields.categoryY = "reason";
