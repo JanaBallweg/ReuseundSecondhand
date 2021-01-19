@@ -176,8 +176,12 @@ line-height:1em;}
 
 	#bubble{
 
-		background-image: url("../Images/bubble.svg"); background-repeat:no-repeat; background-size: 500px auto;}
+		background-image: url("../Images/bubble.png"); background-repeat:no-repeat; margin-top: 0em; background-size: 100% 90%;}
 	
+		#bubblep{
+			margin: 1em;
+			color: white;
+		}
 	/* --------------------------------------- */
 	
 	
