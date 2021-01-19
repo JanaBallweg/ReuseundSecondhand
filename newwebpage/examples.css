@@ -176,7 +176,7 @@ line-height:1em;}
 
 	#bubble{
 
-		background-image: url("../Images/bubble_small3.svg"); background-repeat:no-repeat; margin-top: 0em; background-size: 100% auto;}
+		background-image: url("../Images/bubble_small5.svg"); background-repeat:no-repeat; margin-top: 0em; background-size: 86% auto;}
 	
 		#bubblep{
 			margin: 1em;
@@ -184,10 +184,11 @@ line-height:1em;}
 		}
 
 	#Person1{
-		height: 35em;
+		height: 20em;
 		width:auto;
-		text-align: right;
-	margin-left:22em;	}	
+		margin-left:5em;
+		
+	}	
 	/* --------------------------------------- */
 	
 	
