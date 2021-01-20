@@ -12,8 +12,8 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 #section0{ background-image: url("../Images/Zeichenfläche\ 1.svg"); background-repeat:no-repeat; background-position:right; background-size:100% auto;}
 #section1 {   background-image: url("../Images/Zeichenfläche\ 2.svg"); background-repeat:no-repeat; background-size: 100% auto;}
 #section2 {  background-image: url("../Images/Zeichenfläche\ 3.svg"); background-repeat:no-repeat; background-position:right; background-size: 100% auto;}
-#section3 { background:#ffffff;}
-#section4 { background-image: url("../Images/dreieck_medium_bam.png"); background-repeat:no-repeat; background-size: cover;}
+#section3 { background-image: url("../Images/Zeichenfläche\ 4.svg"); background-repeat:no-repeat; background-position:right; background-size: 100% auto;}
+#section4 { background-image: url("../Images/Zeichenfläche\ 6.svg"); background-repeat:no-repeat; background-size: cover;}
 
 
 a{
@@ -438,9 +438,9 @@ border-color:#63A3E0;
  }
 
  a:link{
-	 color:rgb(4, 98, 92);
+	 color:"#063567";
  }
- a:visited {  color:rgb(4, 98, 92);
+ a:visited {  color:"#063567";
 }
 	
 
