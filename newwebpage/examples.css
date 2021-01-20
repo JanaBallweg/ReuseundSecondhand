@@ -410,6 +410,8 @@ border-color:#63A3E0;
 	
 	
 	}
+
+
 .studie-img{
 	margin-left:15%;  
    margin-top:5em;    }
@@ -457,13 +459,29 @@ top:15em;
 
 #buttonverkauf{
 
-	background-color:#689195;
-	border-color:#517e82;
+	color:#fff;
+	background-color:#216FB9;
+	border-color:#216FB9;
 	
 }
 
 #buttonkauf{
 
-	background-color:#9dc3e7;;
-border-color:#84a6c5;
+	color:#fff;
+	background-color:#063567;;
+	border-color:#063567;
+}
+
+#altersklasse{
+
+	color:#fff;
+	background-color:#B6D8F7;;
+	border-color:#B6D8F7;
+}
+
+#geschlecht{
+
+	color:#fff;
+	background-color:#B6D8F7;;
+	border-color:#B6D8F7;
 }
