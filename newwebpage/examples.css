@@ -9,9 +9,9 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 
 }
 
-#section0{ background-image: url("../Images/startseitenew3.svg"); background-repeat:no-repeat; background-position:right; background-size:cover;}
-#section1 {   background-image: url("../Images/Studie1.svg"); background-repeat:no-repeat; background-size: 100% auto;}
-#section2 {  background:#ffffff;}
+#section0{ background-image: url("../Images/Zeichenfläche\ 1.svg"); background-repeat:no-repeat; background-position:right; background-size:100% auto;}
+#section1 {   background-image: url("../Images/Zeichenfläche\ 2.svg"); background-repeat:no-repeat; background-size: 100% auto;}
+#section2 {  background-image: url("../Images/Zeichenfläche\ 3.svg"); background-repeat:no-repeat; background-position:right; background-size: 100% auto;}
 #section3 { background:#ffffff;}
 #section4 { background-image: url("../Images/dreieck_medium_bam.png"); background-repeat:no-repeat; background-size: cover;}
 
