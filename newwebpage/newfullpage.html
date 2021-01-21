@@ -387,12 +387,13 @@ chart.responsive.enabeled =true;
 
 						Interessant dabei ist, dass jedem dritten Städter der <strong>Aufwand für den Verkauf zu groß</strong> ist (32 %), gegenüber jeder fünften Person aus der Vorstadt (20 %) oder vom Land (17 %).
 				 </p> 
-				 <img id="imgkarton" src="../Images/Kartons.png" height="auto" >
-				 <img id="imgentsorgung" src="../Images/muelltonne_gelb.svg" width="120" height="auto" >
-					
-					
-					
+				
+				 <img id="imgkarton" src="../Images/kartons.svg" height="auto" width="300">
 				</div>
+				
+					
+					
+				
 
 				
 			</div>
@@ -608,14 +609,18 @@ chart.events.on("datavalidated", function() {
 				<div class="row">
 					<div class="col-sm-6">
 					<div class="chartlayout"  id="chartdiv6"></div>
+					<div class="vorteilenachteile3">
 						<p><strong>Vorteile Gebraucht-Verkauf</strong></p>
-						<p>Das Hauptargument für den Verkauf von gebrauchten Produkten ist über alle Altersgruppen hinweg, dass das Produkt <strong>für andere noch einen Wert</strong> haben könnte. Es bietet eine <strong>zusätzliche Einnahmequelle</strong>, sowie die <strong>Verlängerung des Produktzyklus</strong>.</p>
+						<p>Das Hauptargument für den Verkauf ist <strong>der Wert</strong> des Produktes für andere. Es ist eine <strong>zusätzliche Einnahmequelle</strong> und verlängert den <strong>Lebenszyklus</strong>.</p>
+					</div>
 					</div>
 
 					<div class="col-sm-6" >
 					 <div class="chartlayout" id="chartdiv7"></div> 
+					 <div class="vorteilenachteile4">
 						 <p><strong>Nachteile Gebraucht-Verkauf</strong></p>
-						  <p>Der größte Nachteil des Verkaufs ist der <strong></strong>große Zeitaufwand</strong>. Eine weitere Hürde ist die <strong>Unkenntnis über den Wert</strong> der Produkte und auch die<strong> Angst vor Betrug</strong>.</p>
+						  <p>Der größte Nachteil des Verkaufs ist der <strong></strong>große Zeitaufwand</strong>. Zusätzlich ist der <strong>Wert</strong> des Produkts unklar und es besteht auch <strong> Angst vor Betrug</strong>.</p>
+					</div>
 					</div>
 					   
 				  </div>
@@ -948,20 +953,20 @@ chart.events.on("datavalidated", function() {
 				<h2>Kauf gebrauchter Produkte</h2>
 				<div class="container-fluid position-relative">
 					<div class="row">
-					<div class="col-md-9">
+					<div class="col-md-7">
 						<div class="chartlayout" id="chartdiv8"></div>
 					</div>
-					<div class="col-md-3">
+					<div class="col-md-5">
 						<button type="button" class="btn btn-lg" id="altersklasse" onclick="toggleParagraph2(1, 2);">Altersklasse</button>
 			<button type="button" class="btn btn-lg" id="geschlecht" onclick="toggleParagraph2(2, 1);">Geschlecht</button>
 					
 						<p id="caption1">
-							Die jüngere Generation, die <strong>16-29-Jährigen</strong>, kaufen häufiger gebrauchte<strong> Kleidung</strong> (31% vs. 32%) 
-							und gebrauchte <strong>Videospiele/Spielzeug </strong> (28% vs. 18%) als <strong>über 30-Jährige.</strong> Diese kaufen dagegen häufiger <strong> CDs/DVDs </strong> (31% vs. 25%)und <strong>Fahrzeuge </strong> (27% vs. 19%) gebraucht.
+							<strong>Die 16-29-jährigen</strong> kaufen häufiger gebrauchte Kleidung (31 % vs. 32 %) 
+							und gebrauchte Videospiele/Spielzeuge (28 % vs. 18 %). </br></br><strong>Die über 30-jährigen</strong> kaufen dagegen häufiger gebrauchte CDs/DVDs (31 % vs. 25 %) und Fahrzeuge (27 % vs. 19 %) gebraucht.
 						</p>
 						<p id="caption2">
-							<strong>Frauen</strong> kaufen häufiger gebrauchte <strong>Kleidung</strong> (38% w vs. 19% m), <strong>Baby-/Kinderausstattung</strong> (21% w vs. 13% m) sowie <strong>Möbel & Dekoration </strong> (42% w vs. 31% m). 
-							<strong>Männer </strong>hingegen kaufen häufiger <strong> Smartphones & Tablets </strong> (23% vs. 18%), <strong>Elektrogeräte</strong> (24% vs. 17%), <strong>/Spielzeuge</strong> (37% vs. 29%) sowie <strong>Fahrzeuge</strong> (50% vs. 41%).
+							<strong>Frauen</strong> kaufen deutlich häufiger gebrauchte Kleidung (38 % w vs. 19 % m) und Kinderausstattung (21 % vs. 13 %), sowie Möbel/Dekoration (42 % vs. 31 %). </br>
+						</br><strong>Männer </strong>hingegen kaufen häufiger Smartphones & Tablets (23 % m vs. 18 % w), Elektrogeräte inkl. PCs/Radios (24 % vs. 17 %), Videospiele/Spielzeuge </br> (37 % vs. 29 %), sowie Fahrzeuge (50 % vs. 41 %).
 						  </p>
 				  </div>
 				  <script>
@@ -1106,10 +1111,10 @@ chart.events.on("datavalidated", function() {
 		<h2>Verkaufte Produkte in den letzen 12 Monaten</h2>
 			<div class="container-fluid position-relative">
 				<div class="row">
-				<div class="col-md-9">
+				<div class="col-md-7">
 					<div class="chartlayout" id="chartdiv9"></div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-5">
 					<p>
 						Bezüglich der verkauften Produktkategorien der letzten 12 Monate handelt es sich bei </br><strong>40 % </strong>der verkauften Waren um<strong> Bücher</strong>, bei <strong>36 % </strong>um <strong>Kleidung,
             Schuhe und Accessoires</strong> und bei <strong>30 %</strong> um <strong>CDs, DVDs oder Blu-Rays</strong>. Diese decken sich teilweise mit den Angaben zum Kauf gebrauchter Produkte. </p> 
@@ -1234,14 +1239,14 @@ chart.cursor.lineX.disabled = true;
 							<div class="chartlayout" id="chartdiv10"></div>
 						</div>
 						<div class="col-md-6">
-							<img src="../images/Vorsätze.png" width="400" height="auto" >
+							<img id="imgvorsätze" src="../images/Vorsätze.png" width="350" height="auto" >
 						</div>
 					  </div>
 					  <div class="textwithoutmargin">
-					  <p>Weniger als die <strong> Hälfte der Befragten (47%)</strong> hat in den letzten 12 Monaten Gebraucht-Käufe vorgenommen, unter den<strong> 19- bis 29-Jährigen</strong> 
-						 waren es sogar <strong>59 %</strong>. 
-					 <strong> 49 % der über 30-jährigen Personen</strong> geben an, in den letzten 12 Monaten gebrauchte Waren gekauft zu haben, bei den jüngeren waren es dagegen lediglich <strong>36 %</strong>.
-					   Darüber hinaus geben <strong>22 %</strong> der 1.023 Teilnehmenden an mindestens einmal etwas Gebrauchtes gekauft zu haben und <strong>29 % </strong>kauften in den letzten 12 Monaten wiederholt Produkte, welche nicht mehr neuwertig waren. </p> 
+					  <p>Weniger als die <strong> Hälfte der Befragten</strong> (47%) hat in den letzten 12 Monaten Gebraucht-Käufe vorgenommen. Unter den<strong> 19- bis 29-jährigen</strong> 
+						 waren es sogar 59 %. 
+					  Bei den<strong> über 30-jährigen </strong> geben 49 % an, in den letzten 12 Monaten gebrauchte Waren gekauft zu haben. Bei den <strong>Jüngeren</strong> waren es dagegen lediglich 36 %.
+					   Darüber hinaus geben</br> 22 % der 1.023 Teilnehmenden an, mindestens einmal etwas Gebrauchtes gekauft zu haben. </p> 
 								</p>
 							</div>
 				</div>
@@ -1307,11 +1312,6 @@ series.colors.list = [
     am4core.color("#63A3E0"),
     am4core.color("#A6A6A6"),
   ];
-  
-
-
-
-chart.legend = new am4charts.Legend();
 		
 		</script>
 			</div>
