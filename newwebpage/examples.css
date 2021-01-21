@@ -216,16 +216,14 @@ line-height:1em;}
 	}
 
 	#chartdiv3 {
-	   margin-left:10em;
-        
+	  
+	   width: 250%;
+	   width: 100vw;
+	   height: 70vh
+    
 	}
 
-	#chartdiv3_1, #chartdiv3_2{
-		max-height: 30%;
-		height: 40vh;
-
-
-	}
+	
 
 	#chartdiv4, #chartdiv6{
 		width: 120%;
