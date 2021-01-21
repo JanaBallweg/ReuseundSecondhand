@@ -11,7 +11,7 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 
 #section0{ background-image: url("../Images/Zeichenfläche\ 1.svg"); background-repeat:no-repeat; background-position:right; background-size:100% auto;}
 #section1 {   background-image: url("../Images/Zeichenfläche\ 2.svg"); background-repeat:no-repeat; background-size: 100% auto;}
-#section2 {  background-image: url("../Images/Zeichenfläche\ 3.svg"); background-repeat:no-repeat; background-position:right; background-size: 100% auto;}
+#section2 {  background-image: url("../Images/Zeichenfläche\ 4.svg"); background-repeat:no-repeat; background-position:right; background-size: 100% auto;}
 #section3 { background-image: url("../Images/Zeichenfläche\ 4.svg"); background-repeat:no-repeat; background-position:right; background-size: 100% auto;}
 #section4 { background-image: url("../Images/Zeichenfläche\ 6.svg"); background-repeat:no-repeat; background-size: cover;}
 
@@ -184,9 +184,9 @@ line-height:1em;}
 		}
 
 	#Person1{
-		height: 20em;
+		height: 30em;
 		width:auto;
-		margin-left:5em;
+		
 		
 	}	
 	/* --------------------------------------- */
@@ -458,8 +458,8 @@ top:15em;
 #buttonverkauf{
 
 	color:#fff;
-	background-color:#216FB9;
-	border-color:#216FB9;
+	background-color:#97BCDE;
+	border-color:#97BCDE;
 	
 }
 
@@ -482,4 +482,13 @@ top:15em;
 	color:#fff;
 	background-color:#B6D8F7;;
 	border-color:#B6D8F7;
+}
+#plinks{
+	margin-top: 3em;
+		width: 20em;
+		color: white;
+		background-image:linear-gradient(to right, #063567 0%, #0C4A8A 50%) ;
+		border:  2px solid #063567;
+		border-radius: 1em 1em 1em 1em;
+		padding: 2em;
 }

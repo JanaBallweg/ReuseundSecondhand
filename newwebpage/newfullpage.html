@@ -125,17 +125,15 @@
 					
 					<div class="col-md-4">
 
-						<!--<div id="bubble">
-						<p id="bubblep">
+						
+						<!--p id="bubblep">
 							</br>
 							Mit <strong>62 %</strong> sind <strong>CDs, DVDs </strong>und <strong>Bücher</strong>  </br> die häufigsten Produkte, die seit mindestens </br> 12 Monaten nicht mehr benutzt wurden. </br>
 							 Weitere <strong>10 % </strong>gaben an keine Produkte nicht </br> zu nutzen.
+						</p-->
+
+						<img id="Person1" src="../Images/Gruppe 1.png">
 					
-
-						</p>
-
-						<img id="Person1" src="../Images/PersonBubble_02.svg">
-					</div>-->
 					</div>
 				  </div>
 			</div>
@@ -249,15 +247,16 @@ chart.responsive.enabled = true;
 				<h2>Wert der ungenutzten Produkte in Euro</h2>
 					<div class="container-fluid position-relative">
 						<div class="row">
-						<div class="col-md-9">
-							<div class="chartlayout" id="chartdiv2"></div>
+						<div class="col-md-4">
+							<p id=plinks>
+								Knapp  <strong>die Hälfte der Befragten (47%) </strong>gibt an, ungenutzte Produkte mit einem Wert von <strong> unter 500 € </strong>zu besitzen. <br>Darüber hinaus liegt bei <strong>einem Drittel</strong> der Wert ungenutzter Produkte bei <strong>über 500 €</strong>.
+								</br></br><strong> Im Westen </strong> haben die ungenutzten Produkte vermehrt einen Wert </br>von <strong>250-499 €</strong>. <strong>Im Osten </strong> hingegen liegt der Wert bei <strong>100-259 €</strong>.
+								<strong>Der Deutsche </strong>besitzt im <strong>Durchschnitt </strong>ungenutzte Produkte im Wert von <strong>1.289 €</strong>.
+								</p>
+							
 						</div>
-						<div class="col-md-3">
-							<p>
-							Knapp  <strong>die Hälfte der Befragten (47%) </strong>gibt an, ungenutzte Produkte mit einem Wert von <strong> unter 500 € </strong>zu besitzen. <br>Darüber hinaus liegt bei <strong>einem Drittel</strong> der Wert ungenutzter Produkte bei <strong>über 500 €</strong>.
-                			</br></br><strong> Im Westen </strong> haben die ungenutzten Produkte vermehrt einen Wert </br>von <strong>250-499 €</strong>. <strong>Im Osten </strong> hingegen liegt der Wert bei <strong>100-259 €</strong>.
-                			<strong>Der Deutsche </strong>besitzt im <strong>Durchschnitt </strong>ungenutzte Produkte im Wert von <strong>1.289 €</strong>.
-							</p>
+						<div class="col-md-8">
+							<div class="chartlayout" id="chartdiv2"></div>
 						</div>
 					  </div>
 				</div>
@@ -679,14 +678,15 @@ chart.events.on("datavalidated", function() {
 	series.defaultState.transitionDuration = 1000;
 	series.sequencedInterpolationDelay = 100;
 	series.columns.template.strokeOpacity = 0;
+	series.fill = am4core.color("#0C4A8A");
+	
 	
 	series.tooltipText = "{valueX}";
-	
 	chart.cursor = new am4charts.XYCursor();
 	chart.cursor.lineY.disabled = true;
 	chart.cursor.lineX.disabled = true;
 	
-	series.fill = am4color.color("#063567");
+	
 	chart.responsive.enabeled =true;
 	
 	 </script>
@@ -759,7 +759,7 @@ chart.events.on("datavalidated", function() {
 	series.defaultState.transitionDuration = 1000;
 	series.sequencedInterpolationDelay = 100;
 	series.columns.template.strokeOpacity = 0;
-	
+	series.fill = am4core.color("#0C4A8A");
 	
 	
 	
@@ -769,7 +769,7 @@ chart.events.on("datavalidated", function() {
 	chart.cursor.lineY.disabled = true;
 	chart.cursor.lineX.disabled = true;
 	
-	series.fill = am4color.color("#063567");
+	
 	chart.responsive.enabeled =true;
 	
 	
@@ -837,7 +837,7 @@ chart.events.on("datavalidated", function() {
 		series.sequencedInterpolationDelay = 100;
 		series.columns.template.strokeOpacity = 0;
 		
-		series.fill = am4core.color("#216FB9");
+		series.fill = am4core.color("#97BCDE");
 		
 		series.tooltipText = "{valueX}";
 		
@@ -911,7 +911,7 @@ chart.events.on("datavalidated", function() {
 		series.sequencedInterpolationDelay = 100;
 		series.columns.template.strokeOpacity = 0;
 		
-		series.fill = am4core.color("#216FB9");
+		series.fill = am4core.color("#97BCDE");
 		
 		series.tooltipText = "{valueX}";
 		
@@ -1188,7 +1188,7 @@ series.sequencedInterpolation = true;
 series.defaultState.transitionDuration = 1000;
 series.sequencedInterpolationDelay = 100;
 series.columns.template.strokeOpacity = 0;
-series.fill = am4core.color("#063567");
+series.fill = am4core.color("#0C4A8A");
 
 series.tooltipText = "{valueX}";
 
@@ -1402,6 +1402,7 @@ chart.legend = new am4charts.Legend();
 					series.defaultState.transitionDuration = 1000;
 					series.sequencedInterpolationDelay = 100;
 					series.columns.template.strokeOpacity = 0;
+					series.fill = am4core.color("#0C4A8A");
 					
 					
 					
@@ -1411,7 +1412,7 @@ chart.legend = new am4charts.Legend();
 					chart.cursor.lineY.disabled = true;
 					chart.cursor.lineX.disabled = true;
 					
-					series.fill = am4color.color("#063567");
+					
 					 </script>
 					
 					<script>
@@ -1464,6 +1465,7 @@ chart.legend = new am4charts.Legend();
 					series.defaultState.transitionDuration = 1000;
 					series.sequencedInterpolationDelay = 100;
 					series.columns.template.strokeOpacity = 0;
+					series.fill = am4core.color("#0C4A8A");
 					
 					
 					
@@ -1473,7 +1475,7 @@ chart.legend = new am4charts.Legend();
 					chart.cursor.lineY.disabled = true;
 					chart.cursor.lineX.disabled = true;
 					
-					series.fill = am4color.color("#216FB9");
+				
 					
 					
 					
@@ -1574,6 +1576,7 @@ chart.legend = new am4charts.Legend();
 				series.defaultState.transitionDuration = 1000;
 				series.sequencedInterpolationDelay = 100;
 				series.columns.template.strokeOpacity = 0;
+				series.fill = am4core.color("#0C4A8A");
 				
 				
 				
@@ -1584,8 +1587,7 @@ chart.legend = new am4charts.Legend();
 				chart.cursor.lineY.disabled = true;
 				chart.cursor.lineX.disabled = true;
 				
-				series.fill = am4color.color("#063567");
-				
+			
 				 </script>
 				
 				<script>
