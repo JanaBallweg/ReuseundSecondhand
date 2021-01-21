@@ -55,11 +55,7 @@ abbr,acronym { border: 0;
 
 /* Custom CSS
  * --------------------------------------- */
-body{
-	font-family: arial,helvetica;
-	color: #333;
-	color: rgba(0,0,0,0.5);
-}
+
 .wrap{
 	margin-left: auto;
 	margin-right: auto;
@@ -70,10 +66,7 @@ body{
 p{
 	font-size: 2em;
 }
-.intro p{
-	width: 100%;
-	
-}
+
 
 .studiep{
 margin-top:7em;
@@ -305,7 +298,7 @@ line-height:1em;}
 	}
 
 	.intro p{
-		color: rgb(17, 17, 17);
+		color: white;
 		font-size: 1.1em;
 		margin-top:1em;
 		text-align:left;
@@ -527,6 +520,9 @@ top:15em;
 #imgentsorgung{
 	margin-top:-3em;
 
+}
+#imgkarton{
+	margin-left:-3em;
 }
 
 .vorteilenachteile1{
