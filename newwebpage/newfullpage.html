@@ -570,10 +570,10 @@ chart.events.on("datavalidated", function() {
 		<div class="intro">
 			<h1>Kauf und Verkauf unbenutzer Produkte</h1>	
 			<div class="row">
-				<div class="col-sm-8">
+				<div class="col-sm-7">
 					<h2>Die wichtigsten Vor-und Nachteile</h2>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-sm-5">
 					<button type="button" class="btn btn-lg" id="buttonkauf" onclick="toggleParagraph(1, 2)">Gebraucht-Kauf</button>
 					<button type="button" class="btn btn-lg" id="buttonverkauf" onclick="toggleParagraph(2, 1)">Gebraucht-Verkauf</button>
 	
@@ -584,14 +584,18 @@ chart.events.on("datavalidated", function() {
 				<div class="row">
 					<div class="col-sm-6">
 					<div class="chartlayout"  id="chartdiv4"></div>
+					<div class="vorteilenachteile1">
 						<p><strong>Vorteile Gebraucht-Kauf</strong></p>
 						<p>Der wichtigste Vorteil liegt beim <strong>Sparpotenzial</strong>. Dadurch können gebrauchte Produkte gekauft werden, die sich viele Leute neu nicht leisten können.</p>
+					</div>
 					</div>
 
 					<div class="col-sm-6" >
 					 <div class="chartlayout" id="chartdiv5"></div> 
+					 <div class="vorteilenachteile2">
 						 <p><strong>Nachteile Gebraucht-Kauf</strong></p>
 						  <p>Spontan sind die größten Bedenken beim Gebraucht-Kauf <strong>Zustand, Funktionalität, Beschädigung</strong> und <strong>Sauberkeit</strong>.</p>
+					</div>
 					</div>
 					   
 				  </div>
@@ -648,19 +652,19 @@ chart.events.on("datavalidated", function() {
 		"reason": "Sonstiges",
 		"percent": 3
 	}, {
-		"reason": "Einzigartigkeit der Produkte",
+		"reason": "Einzigartigkeit",
 		"percent": 19
 	}, {
-		"reason": "Lieber gebrauchte produkte mit hoher Qualität",
+		"reason": "Hohe Qualität",
 		"percent": 24
 	}, {
-		"reason": "Kauf nicht mehr verfügbaren Produkte",
+		"reason": "Kauf ausverkaufter Produkte",
 		"percent": 34
 	}, {
-		"reason": "Produkte, die man sich neu nie leisten kann",
+		"reason": "Bezahlbare Produkte",
 		"percent": 36
 	}, {
-		"reason": "Vermeidung unnötiger Resourcen",
+		"reason": "Vermeidung von Resourcen",
 		"percent": 42
 	}, {
 		"reason": "Sparen beim Kauf",
@@ -717,34 +721,34 @@ chart.events.on("datavalidated", function() {
 		"reason": "Sonstiges",
 		"percent": 2
 	},	{
-		"reason": "Nur für Leute, die sich etwas Neues nicht leisten können",
+		"reason": "Nur für geringes Budget",
 		"percent": 4
 	}, {
-		"reason": "Die Kommunikation mit dem Verkäufer ist anstrengend",
+		"reason": "Anstrengendere Kommunikation",
 		"percent": 8
 	}, {
-		"reason": "Keine breite Auswahl",
+		"reason": "Geringe Auswahl",
 		"percent": 9
 	}, {
-		"reason": "Suche ist aufwendig",
+		"reason": "Aufwendige Suche",
 		"percent": 14
 	}, {
-		"reason": "Ich fühle mich wohler mit neuen Produkten",
+		"reason": "Besseres Gefühl mit neuen Produkten",
 		"percent": 17
 	},{
-		"reason": "Bedenken über Hygiene",
+		"reason": "Hygiene-Bedenken",
 		"percent": 21
 	},{
-		"reason": "Keine Angaben über vorherige Nutzung",
+		"reason": "Vorherige Nutzung unbekannt",
 		"percent": 33
 	}, {
-		"reason": "Bedenken, ob Produkte sind wie beschrieben sind",
+		"reason": "Bedenken über Zustand",
 		"percent": 34
 	}, {
-		"reason": "Bedenken bei der Vertrauenswürdigkeit des Verkäufers",
+		"reason": "Bedenken über Vertrauenswürdigkeit",
 		"percent": 46
 	}, {
-		"reason": "Ungewissheit über die Funktionalität der Produkte",
+		"reason": "Ungewissheit über Funktionalität",
 		"percent": 52
 	}];
 	
@@ -809,19 +813,19 @@ chart.events.on("datavalidated", function() {
 			"reason": "Interessante Begegnungen",
 			"percent": 7
 		}, {
-			"reason": "Gute Möglichkeite bei Veränderung der Lebenssituation",
+			"reason": "Gut bei Veränderung der Lebenssituation",
 			"percent": 28
 		}, {
-			"reason": "Platz für neue Dinge",
+			"reason": "Platz für Neues",
 			"percent": 43
 		}, {
-			"reason": "Gutes für die Umwelt, längerer Lebenszyklus des Produktes",
+			"reason": "Längerer Produktlebenszyklus",
 			"percent": 43
 		}, {
 			"reason": "Zusätzliche Einnahmequele",
 			"percent": 43
 		}, {
-			"reason": "Neuen Wert des Produktes für andere Menschen",
+			"reason": "Neuer Wert für andere Menschen",
 			"percent": 58
 		}];
 		
@@ -879,19 +883,19 @@ chart.events.on("datavalidated", function() {
 			"reason": "Sonstiges",
 			"percent": 7
 		}, {
-			"reason": "Unwissen über das Wo und Wie des Verkaufes",
+			"reason": "Unwissen über Verkauf",
 			"percent": 8
 		}, {
-			"reason": "Verkauf an Fremde zu unsicher",
+			"reason": "Verkauf zu unsicher",
 			"percent": 20
 		}, {
-			"reason": "Kommunikation mit dem Käufer ist anstrengend",
+			"reason": "Anstrengende Kommunikation",
 			"percent": 31
 		}, {
 			"reason": "Angst vor Betrug",
 			"percent": 32
 		}, {
-			"reason": "Unwissen über dan Wert und den Preis des Produkts",
+			"reason": "Wert und Preis unklar",
 			"percent": 34
 		}, {
 			"reason": "Zeitaufwand",

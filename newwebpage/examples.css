@@ -236,19 +236,23 @@ line-height:1em;}
 
 	
 
-	#chartdiv4, #chartdiv6{
+	#chartdiv4, #chartdiv6, #chartdiv7{
 		width: 120%;
         max-width:50em;
       max-height:50em ;
-      height: 60vh;}
+	  height: 40vh;
+	  margin-left: -7em;
+	}
       
 
-	 #chartdiv5, #chartdiv7{
+	 #chartdiv5{
 
-		width: 150%;
+		width: 100%;
         max-width:50em;
       max-height:50em ;
-      height: 60vh;
+	  height: 50vh;
+	  width: 70vw;
+	  margin-left: -5em;
 	 }
 	
 	 #chartdiv10 {
@@ -466,6 +470,8 @@ top:15em;
 	color:#fff;
 	background-color:#97BCDE;
 	border-color:#97BCDE;
+	font-size: 1em;
+	margin-top: 1em;
 	
 }
 
@@ -474,6 +480,8 @@ top:15em;
 	color:#fff;
 	background-color:#063567;;
 	border-color:#063567;
+	font-size: 1em;
+	margin-top: 1em;
 }
 
 #altersklasse{
@@ -501,7 +509,6 @@ top:15em;
 		text-align: justify;
 }
 
-
 #pentsorgung{
 	margin-top:1em;
 	margin-left: 3.5em;
@@ -521,3 +528,28 @@ top:15em;
 	margin-top:-3em;
 
 }
+
+.vorteilenachteile1{
+	margin-top:6em;
+		width: 30em;
+		background-image:linear-gradient(to right, #063567 0%, #0C4A8A 50%) ;
+		border:  2px solid #063567;
+		border-radius: 1em 1em 1em 1em;
+		padding: 1.0em;
+		font-size: 1.0em;
+		color: #fff;
+		
+}
+
+.vorteilenachteile2{
+	margin-top:1em;
+		width: 30em;
+		color: white;
+		background-image:linear-gradient(to right, #063567 0%, #0C4A8A 50%) ;
+		border:  2px solid #063567;
+		border-radius: 1em 1em 1em 1em;
+		padding: 1.0em;
+		font-size: 1.0em;
+		
+}
+
