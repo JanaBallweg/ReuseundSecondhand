@@ -184,6 +184,7 @@ line-height:1em;}
 		}
 
 	#Person1{
+		margin-top: 1em;
 		height: 30em;
 		width:auto;
 		
@@ -206,7 +207,7 @@ line-height:1em;}
 		max-width:auto;
 		height: 80vh;
       	max-height: 80%;
-    	font-size: 15px;
+    	font-size: 12px;
         background-color: #ffffff;
 		overflow: auto;
 		margin-top:0.5em;
@@ -215,12 +216,21 @@ line-height:1em;}
 
 	}
 
+	#chartdiv2 {
+
+		 width: 80%;
+		 width: 30vw;
+		 height: 70vh;
+		 margin-left: -1em;
+	  
+	  }
+
 	#chartdiv3 {
 
 	  margin-top:5em;
-	   width: 80%;
+	   width: 90%;
 	   width: 70vw;
-	   height: 70vh
+	   height: 60vh
     
 	}
 
@@ -480,19 +490,21 @@ top:15em;
 	border-color:#B6D8F7;
 }
 #plinks{
-	margin-top: 3em;
-		width: 20em;
+	margin-top: 6em;
+		width: 30em;
 		color: white;
 		background-image:linear-gradient(to right, #063567 0%, #0C4A8A 50%) ;
 		border:  2px solid #063567;
 		border-radius: 1em 1em 1em 1em;
 		padding: 2em;
+		font-size: 1.0em;
+		text-align: justify;
 }
 
 
 #pentsorgung{
-	margin-top:5em;
-	margin-left:15em;
+	margin-top:1em;
+	margin-left: 3.5em;
 	
 		width: 20em;
 		color: white;
@@ -500,10 +512,12 @@ top:15em;
 		border:  2px solid #063567;
 		border-radius: 1em 1em 1em 1em;
 		padding: 2em;
+		font-size: 1.0em;
+		/*text-align: justify;*/
 		
 }
 
 #imgentsorgung{
-	margin-top:5em;
+	margin-top:-3em;
 
 }
