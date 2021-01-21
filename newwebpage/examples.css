@@ -216,9 +216,10 @@ line-height:1em;}
 	}
 
 	#chartdiv3 {
-	  
-	   width: 250%;
-	   width: 100vw;
+
+	  margin-top:5em;
+	   width: 80%;
+	   width: 70vw;
 	   height: 70vh
     
 	}
@@ -306,11 +307,6 @@ line-height:1em;}
 	}
 
 	
-
-	.textbottom{
-		top:35em;
-		margin-top:2em;
-	}
 
 	.textwithoutmargin{
 		margin-top:1em;
@@ -491,4 +487,23 @@ top:15em;
 		border:  2px solid #063567;
 		border-radius: 1em 1em 1em 1em;
 		padding: 2em;
+}
+
+
+#pentsorgung{
+	margin-top:5em;
+	margin-left:15em;
+	
+		width: 20em;
+		color: white;
+		background-image:linear-gradient(to right, #063567 0%, #0C4A8A 50%) ;
+		border:  2px solid #063567;
+		border-radius: 1em 1em 1em 1em;
+		padding: 2em;
+		
+}
+
+#imgentsorgung{
+	margin-top:5em;
+
 }
