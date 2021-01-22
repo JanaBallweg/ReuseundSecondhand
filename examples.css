@@ -307,6 +307,12 @@ line-height:1em;}
 
 
 	}
+#chartdiv1{
+	width: 100%;
+	max-width:auto;
+  max-height:50em ;
+  height: 70vh;
+  margin-left: -5em;}
 
 	#chartdiv2 {
 
