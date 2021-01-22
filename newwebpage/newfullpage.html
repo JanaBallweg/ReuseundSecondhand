@@ -68,7 +68,7 @@
 				DHBW Campus Mosbach von </br>
 				Jana Ballweg, Lea Deppisch, Jana Halter und Shirin Ham.
 			</p>
-			<button type="button" class="btn btn-warning" id="welcomebutton">Los geht´s</button>
+			<!--<button type="button" class="btn btn-warning" id="welcomebutton">Los geht´s</button>-->
             <div class="logo-img">
 				<img src="../Images/logo_blau.png" width="100" height="auto">
 		</div>
@@ -132,7 +132,7 @@
 							 Weitere <strong>10 % </strong>gaben an keine Produkte nicht </br> zu nutzen.
 						</p-->
 
-						<img id="Person1" src="../Images/Gruppe 1.svg">
+						<img id="Person1" src="../Images/Sprechblase1.svg">
 					
 					</div>
 				  </div>
@@ -371,7 +371,7 @@ chart.responsive.enabeled =true;
 
 					<div class="chartlayout" id="chartdiv3"></div>
 					
-					
+					<p id="sternchen">* Hierzu gibt es keine vertiefenden Zahlen aus der Studie.</p>
 					
 				</div>
 				
@@ -390,13 +390,8 @@ chart.responsive.enabeled =true;
 				
 				 <img id="imgkarton" src="../Images/kartons.svg" height="auto" width="300">
 				</div>
-				
-					
-					
-				
-
-				
-			</div>
+				</div>
+			
 		</div>
 		</div>
 	
@@ -422,15 +417,6 @@ var chart = container.createChild(am4charts.PieChart);
 
 // Add data
 chart.data = [{
-  "country": "Keine Entsorgung",
-  "litres": 84,
-  "subData": [{ name: "A", value: 0 }, { name: "B", value: 0 }, { name: "C", value: 0 }],
-  "color": am4core.color("#ffc100")
-}, {
-  "country": "Hausmüll oder Wertstoffhof",
-  "litres": 279,
-  "subData": [{ name: "A", value: 0 }, { name: "B", value: 0 }, { name: "C", value: 0 }]
-}, {
   "country": "Verkauft",
   "litres": 320,
   "subData": [{ name: "Kleinanzeigen", value: 193 }, { name: "Marktplatz", value: 135 }, { name: "Kaufdienst", value: 52 },{ name: "Flohmarkt", value: 19}, { name: "Zeitungsannauce", value: 7}]
@@ -438,6 +424,14 @@ chart.data = [{
   "country": "Verschenkt",
   "litres": 340,
   "subData": [{ name: "Familie und Freunde", value: 361 }, { name: "Online-Kleinanzeigen", value: 330 }, { name: "Wohltätige Einrichtung", value: 197 }, { name: "Straße", value: 136 }]
+}, {"country": "Keine Entsorgung*",
+  "litres": 84,
+  "subData": [{ name: "A", value: 0 }, { name: "B", value: 0 }, { name: "C", value: 0 }],
+  "color": am4core.color("#ffc100")
+}, {
+  "country": "Hausmüll oder Wertstoffhof*",
+  "litres": 279,
+  "subData": [{ name: "A", value: 0 }, { name: "B", value: 0 }, { name: "C", value: 0 }]
 }, ];
 
 // Add and configure Series
@@ -453,10 +447,10 @@ pieSeries.slices.template.events.on("hit", function(event) {
   selectSlice(event.target.dataItem);
 })
 pieSeries.colors.list= [
-  am4core.color("#c8c8c8"),
-  am4core.color("#063567"),
   am4core.color("#0C4A8A"),
   am4core.color("#216FB9"),
+  am4core.color("#c8c8c8"),
+  am4core.color("#063567"),
 ];
 
 var chart2 = container.createChild(am4charts.PieChart);
@@ -587,16 +581,16 @@ chart.events.on("datavalidated", function() {
 					<div class="col-sm-6">
 					<div class="chartlayout"  id="chartdiv4"></div>
 					<div class="vorteilenachteile1">
-						<p><strong>Vorteile Gebraucht-Kauf</strong></p>
-						<p>Der wichtigste Vorteil liegt beim <strong>Sparpotenzial</strong>. Dadurch können gebrauchte Produkte gekauft werden, die sich viele Leute neu nicht leisten können.</p>
+						<p><strong>Vorteile Gebraucht-Kauf</strong></br>
+						Der wichtigste Vorteil liegt beim <strong>Sparpotenzial</strong>. Dadurch können gebrauchte Produkte gekauft werden, die sich viele Leute neu nicht leisten können.</p>
 					</div>
 					</div>
 
 					<div class="col-sm-6" >
 					 <div class="chartlayout" id="chartdiv5"></div> 
 					 <div class="vorteilenachteile2">
-						 <p><strong>Nachteile Gebraucht-Kauf</strong></p>
-						  <p>Spontan sind die größten Bedenken beim Gebraucht-Kauf <strong>Zustand, Funktionalität, Beschädigung</strong> und <strong>Sauberkeit</strong>.</p>
+						 <p><strong>Nachteile Gebraucht-Kauf</strong></br>
+						  Spontan sind die größten Bedenken beim Gebraucht-Kauf <strong>Zustand, Funktionalität, Beschädigung</strong> und <strong>Sauberkeit</strong>.</p>
 					</div>
 					</div>
 					   
@@ -609,7 +603,7 @@ chart.events.on("datavalidated", function() {
 				<div class="row">
 					<div class="col-sm-6">
 					<div class="chartlayout"  id="chartdiv6"></div>
-					<div class="vorteilenachteile3">
+					<div class="vorteilenachteile4">
 						<p><strong>Vorteile Gebraucht-Verkauf</strong></p>
 						<p>Das Hauptargument für den Verkauf ist <strong>der Wert</strong> des Produktes für andere. Es ist eine <strong>zusätzliche Einnahmequelle</strong> und verlängert den <strong>Lebenszyklus</strong>.</p>
 					</div>
@@ -617,7 +611,7 @@ chart.events.on("datavalidated", function() {
 
 					<div class="col-sm-6" >
 					 <div class="chartlayout" id="chartdiv7"></div> 
-					 <div class="vorteilenachteile4">
+					 <div class="vorteilenachteile3">
 						 <p><strong>Nachteile Gebraucht-Verkauf</strong></p>
 						  <p>Der größte Nachteil des Verkaufs ist der <strong></strong>große Zeitaufwand</strong>. Zusätzlich ist der <strong>Wert</strong> des Produkts unklar und es besteht auch <strong> Angst vor Betrug</strong>.</p>
 					</div>
@@ -856,7 +850,7 @@ chart.events.on("datavalidated", function() {
 		series.sequencedInterpolationDelay = 100;
 		series.columns.template.strokeOpacity = 0;
 		
-		series.fill = am4core.color("#97BCDE");
+		series.fill = am4core.color("#63a3e0");
 		
 		series.tooltipText = "{valueX}";
 		
@@ -930,7 +924,7 @@ chart.events.on("datavalidated", function() {
 		series.sequencedInterpolationDelay = 100;
 		series.columns.template.strokeOpacity = 0;
 		
-		series.fill = am4core.color("#97BCDE");
+		series.fill = am4core.color("#63a3e0");
 		
 		series.tooltipText = "{valueX}";
 		
@@ -1107,7 +1101,7 @@ chart.events.on("datavalidated", function() {
 		<!--SLIDE 3-section3-Kauf/Verkauf--------------------------------->	
 <div class="slide" id="slide6">
 	<div class="intro">
-		<h1>Kauf und Verkauf unbenutzer Produkte</h1>	
+		<h1>Kauf und Verkauf ungenutzer Produkte</h1>	
 		<h2>Verkaufte Produkte in den letzen 12 Monaten</h2>
 			<div class="container-fluid position-relative">
 				<div class="row">
@@ -1115,10 +1109,7 @@ chart.events.on("datavalidated", function() {
 					<div class="chartlayout" id="chartdiv9"></div>
 				</div>
 				<div class="col-md-5">
-					<p>
-						Bezüglich der verkauften Produktkategorien der letzten 12 Monate handelt es sich bei </br><strong>40 % </strong>der verkauften Waren um<strong> Bücher</strong>, bei <strong>36 % </strong>um <strong>Kleidung,
-            Schuhe und Accessoires</strong> und bei <strong>30 %</strong> um <strong>CDs, DVDs oder Blu-Rays</strong>. Diese decken sich teilweise mit den Angaben zum Kauf gebrauchter Produkte. </p> 
-					</p>
+					<img id="lady" src="../Images/Sprechblase2.svg">
 				</div>
 			  </div>
 		</div>
@@ -1247,8 +1238,7 @@ chart.cursor.lineX.disabled = true;
 						 waren es sogar 59 %. 
 					  Bei den<strong> über 30-jährigen </strong> geben 49 % an, in den letzten 12 Monaten gebrauchte Waren gekauft zu haben. Bei den <strong>Jüngeren</strong> waren es dagegen lediglich 36 %.
 					   Darüber hinaus geben</br> 22 % der 1.023 Teilnehmenden an, mindestens einmal etwas Gebrauchtes gekauft zu haben. </p> 
-								</p>
-							</div>
+					  </div>
 				</div>
 		
 			<!--shirinsdiagramm 1-->
@@ -1346,16 +1336,9 @@ series.colors.list = [
 							</div>
 						</div>
 					
-						<div class="row">
-						   <div class="col-sm-6">          
-								<p>Die Mehrheit der Personen (49%) <strong>kauft selten gebrauchte Produkte</strong>. Ca. 29% kaufen alle 2-3 Monate.</p>
-						   </div>
-					
-							  
-						   <div class="col-sm-6" >
-							  <p>Die Mehrheit der Personen (30%) verkauft <strong>mehr als viermal im Jahr</strong> gebrauchte Produkte.</p>
-						  </div>
-					
+						<div class="row">    
+								<p id="häufigkeit">Die Mehrheit der Personen (49%) <strong>kauft selten gebrauchte Produkte</strong>. Ca. 29% kaufen alle 2-3 Monate.
+							       Die Mehrheit der Personen (30%) verkauft <strong>mehr als viermal im Jahr</strong> gebrauchte Produkte.</p>
 						</div> 
 				</div>
 				<script>
@@ -1505,23 +1488,21 @@ series.colors.list = [
 	    <div class="slide" id="slide1">
 			<div class="intro">
 				<h1>Kauf und Verkauf unbenutzer Produkte</h1>	
-				<h2>Beliebte Second-Hand-Einkaufsstätten</h2>
+				<h2>Beliebte Second-Hand-Einkaufs- und Verkaufsstätten</h2>
 
 				<div class="container-fluid position-relative">
 					<div class="row">
 						<div class="col-sm-7">
 						
 						  <div class="chartlayout" id="chartdiv13"></div>
-						  <p>Verkauft wurden ungenutzte Produkte von 46 % der Personen über eine <strong>Online-Kleinanzeigenseite (30 %)</strong>, 
-							über einen <strong>Online-Marktplatz (21 %)</strong>, über einen <strong>Ankaufsdienst (8 %)</strong>, auf einem <strong>Flohmarkt (3 %)</strong>
-							 oder über eine <strong>Zeitungsannonce (1 %)</strong>.</p>
+						  <p id="pverkauft"><strong>Einkauf</strong></br>Die Mehrheit (45 %) der Befragten kauft am häufigsten auf <strong>Ebay/Ebay-Kleinanzeigen</strong>. Ganze 40 % geben an, in den letzten 12 Monaten <strong>nichts gebraucht gekauft</strong> zu haben.</p>
 						 
 						</div>
 						<div class="col-sm-5" >
 							
 						 
 						  <div class="chartlayout"  id="chartdiv14"></div>
-						  <p>Die Mehrheit (78%) der Befragten bevorzugt zum Verkauf gebrauchter Produkte <strong>Online-Kanäle</strong>.</p>
+						  <p id="pverkauft"> <strong>Verkauf</strong></br>Die Mehrheit (78 %) der Befragten bevorzugt zum Verkauf gebrauchter Produkte <strong>Online-Kanäle</strong>.</p>
 						</div>
 					</div>
 			</div>
@@ -1539,7 +1520,7 @@ series.colors.list = [
 					"reason": "Weiß nicht/keine Angabe",
 					"percent": 4
 				}, {
-					"reason": "Habe in den letzten 12 Monaten keine gebrauchten Waren gekauft",
+					"reason": "Im letzten Jahr nichts Gebrauchtes gekauft",
 					"percent": 40
 				}, {
 					"reason": "Sonstiges",
@@ -1551,13 +1532,13 @@ series.colors.list = [
 					"reason": "Kleinanzeigen in Zeitungen",
 					"percent": 4
 				}, {
-					"reason": "Gebruachtwarenladen mit wohltätigem Hintergrund",
+					"reason": "Wohltätige Einrichtungen",
 					"percent": 6
 				}, {
 					"reason": "Sonstige Webseite",
 					"percent": 7
 				}, {
-					"reason": "Sonstige Kleinanzeigen-Portale im Internet",
+					"reason": "Sonstige Kleinanzeigen im Internet",
 					"percent": 7
 				}, {
 					"reason": "Freunde/Familie",
@@ -1620,9 +1601,6 @@ series.colors.list = [
 				}]
 				
 				chart.padding(30, 30, 10, 30);
-				chart.legend = new am4charts.Legend();
-				chart.legend.position = "bottom";
-				chart.legend.contentAlign = "left";
 				
 				// Modify chart's colors
 				chart.colors.list = [

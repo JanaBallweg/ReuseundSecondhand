@@ -64,9 +64,7 @@ abbr,acronym { border: 0;
 	position: relative;
 }
 
-p{
-	font-size: 2em;
-}
+
 
 
 .studiep{
@@ -179,7 +177,7 @@ line-height:1em;}
 
 	#Person1{
 		margin-top: 1em;
-		height: 30em;
+		width: 90%;
 		width:auto;
 		
 		
@@ -254,6 +252,7 @@ line-height:1em;}
       max-height:50em ;
 	  height: 40vh;
 	  margin-left: -7em;
+	  margin-top: 3em;
 	}
       
 
@@ -302,7 +301,9 @@ line-height:1em;}
       height: 80vh;
         font-size: 15px;
         background-color: #ffffff;
-		overflow: hidden;	 
+		overflow: hidden;
+		font-size: 12px;
+		margin-left: -2em;	 
 	 }
 	 #chartdiv14 {
 		width: 100%;
@@ -311,7 +312,8 @@ line-height:1em;}
       height: 80vh;
         font-size: 15px;
         background-color: #ffffff;
-		overflow: hidden;	 
+		overflow: hidden;
+		font-size: 12px;	 
 	 }
 
 	
@@ -354,7 +356,7 @@ line-height:1em;}
 		background-image:linear-gradient(to right, #063567 0%, #0C4A8A 50%) ;
 		border:  2px solid #063567;
 		border-radius: 1em 1em 1em 1em;
-		padding: 0.8em;
+		padding: 0.8em 0.8em 0em 0.8em;
 		font-size: 1.0em;
 		text-align: justify;
 	}
@@ -468,7 +470,7 @@ border-color:#63A3E0;
 .dhbw {
     position:absolute;
    
-    color:#063567;
+    color:black;
 	font-family: 'Open Sans'; font: weight 300; 
 }
 
@@ -500,8 +502,8 @@ top:15em;
 #buttonverkauf{
 
 	color:#fff;
-	background-color:#97BCDE;
-	border-color:#97BCDE;
+	background-color:#63a3e0;
+	border-color:#63a3e0;
 	font-size: 1em;
 	margin-top: 1em;
 	
@@ -575,7 +577,7 @@ top:15em;
 		background-image:linear-gradient(to right, #063567 0%, #0C4A8A 50%) ;
 		border:  2px solid #063567;
 		border-radius: 1em 1em 1em 1em;
-		padding: 0.8em;
+		padding: 0.8em 0.8em 0em 0.8em;
 		font-size: 1.0em;
 		color: #fff;
 		text-align: justify;
@@ -588,32 +590,34 @@ top:15em;
 		background-image:linear-gradient(to right, #063567 0%, #0C4A8A 50%) ;
 		border:  2px solid #063567;
 		border-radius: 1em 1em 1em 1em;
-		padding: 0.8em;
+		padding: 0.8em 0.8em 0em 0.8em;
 		font-size: 1.0em;
 		text-align: justify;
 		
 }
 .vorteilenachteile3{
-	margin-top:0.5em;
+	margin-top:6em;
+	margin-left: 2em;
 		width: 30em;
-		color: white;
 		background-image:linear-gradient(to right, #063567 0%, #0C4A8A 50%) ;
 		border:  2px solid #063567;
 		border-radius: 1em 1em 1em 1em;
-		padding: 0.8em;
+		padding: 0.8em 0.8em 0em 0.8em;
 		font-size: 1.0em;
+		color: #fff;
 		text-align: justify;
 		
 }
 .vorteilenachteile4{
-	margin-top:0.5em;
+	margin-top:6em;
+	margin-left: 0em;
 		width: 30em;
-		color: white;
 		background-image:linear-gradient(to right, #063567 0%, #0C4A8A 50%) ;
 		border:  2px solid #063567;
 		border-radius: 1em 1em 1em 1em;
-		padding: 0.8em;
+		padding: 0.8em 0.8em 0em 0.8em;
 		font-size: 1.0em;
+		color: #fff;
 		text-align: justify;
 		
 }
@@ -628,5 +632,44 @@ top:15em;
 	margin-top:0.5em;
 	text-align: justify;
 	width:90%;
+}
+
+#lady{
+	margin-top: 1em;
+	margin-left: 2em;
+	width: 85%;
+}
+
+#häufigkeit{
+	margin-top:2em;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+	background-image:linear-gradient(to right, #063567 0%, #0C4A8A 50%) ;
+	border:  2px solid #063567;
+	border-radius: 1em 1em 1em 1em;
+	padding: 0.8em 0.8em 0.8em 0.8em;
+	font-size: 1.0em;
+	text-align: justify;
+}
+
+#pverkauft{
+	margin-top:2em;
+	margin-left: auto;
+	margin-right: auto;
+		width: 90%;
+		background-image:linear-gradient(to right, #063567 0%, #0C4A8A 50%) ;
+		border:  2px solid #063567;
+		border-radius: 1em 1em 1em 1em;
+		padding: 0.8em 0.8em 0.8em 0.8em;
+		font-size: 1.0em;
+		color: #fff;
+		text-align: justify;
+}
+
+#sternchen{
+	margin-bottom: 10em;
+	font-size: 11px;
 }
 
